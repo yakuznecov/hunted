@@ -1,5 +1,5 @@
 .header {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -13,7 +13,7 @@
 	align-items: center;
 	justify-content: space-between;
 	max-width: 1280px;
-	padding: 0 80px 0 73px;
+	padding: 0 80px;
 	margin: 0 auto;
 	height: 96px;
 	background-color: #f8faff;
@@ -25,7 +25,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 836px;
+	max-width: 834px;
 	width: 100%;
 }
 
@@ -74,4 +74,20 @@
 	background: linear-gradient(180deg, #208ae8, #1681e0);
 	margin: 0 0 0 24px;
 	cursor: pointer;
+
+	@media (hover: hover) {
+		&:hover {
+			background: linear-gradient(180deg, #1679D1 0%, #1371C4 100%);
+			color: #fff;
+		}
+	}
+
+	&:active {
+		background: linear-gradient(180deg, #1679D1 0%, #1371C4 100%);
+		color: #fff;
+	}
+}
+
+.logo {
+	margin-bottom: 1px;
 }

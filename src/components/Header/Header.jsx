@@ -4,7 +4,7 @@ function Header() {
 	return (
 		<header className={styles.header}>
 			<div className={styles.menu}>
-				<a href='/' aria-label='Hunted' alt='Hunted'>
+				<a href='/' className={styles.logo} aria-label='Hunted' alt='Hunted'>
 					<img src='images/logo/logo.svg' alt='logo' />
 				</a>
 				<nav className={styles.nav}>
@@ -16,7 +16,7 @@ function Header() {
 							<span className={styles.title}>Работодателям</span>
 						</li>
 						<li className={styles.item}>
-							<span className={styles.title}>Работодателям</span>
+							<span className={styles.title}>Тарифные планы</span>
 						</li>
 					</ul>
 					<ul className={styles.list}>
