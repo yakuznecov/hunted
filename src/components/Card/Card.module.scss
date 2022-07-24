@@ -1,0 +1,93 @@
+.container {
+	position: relative;
+	width: 329px;
+	height: 445px;
+	border: 1px solid #CFD8DC;
+	border-radius: 8px;
+	padding: 31px;
+}
+
+.title {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #455A64;
+	margin: 0 0 4px;
+}
+
+.icon {
+	position: absolute;
+	top: 31px;
+	right: 31px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 12px;
+}
+
+.count {
+	padding: 0 0 13px 0;
+	border-bottom: 1px solid #CFD8DC;
+	margin: 0 0 32px 0;
+}
+
+.count_num {
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 700;
+	color: #E1E6EE;
+	margin: 0 0 0 -2px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.count_text {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #E1E6EE;
+	margin: 0 0 0 12px;
+}
+
+.sum {
+	font-size: 21px;
+	line-height: 25px;
+	font-weight: 700;
+	color: #37474F;
+	margin: 0 0 16px;
+}
+
+.item {
+	font-size: 16px;
+	line-height: 16px;
+	color: #78909C;
+	margin-bottom: 16px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.link {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 16px;
+	color: #1681E0;
+	border-bottom: 1px solid #1681E0;
+	margin: 40px 0 0 2px;
+	transition: all 0.2s;
+
+	@media (hover: hover) {
+		&:hover {
+			border-bottom: 1px solid #1163AC;
+			color: #1163AC;
+		}
+	}
+
+	&:active {
+		border-bottom: 1px solid #1163AC;
+		color: #1163AC;
+	}
+}
