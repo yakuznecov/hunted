@@ -7,11 +7,11 @@
 		content: "";
 		position: absolute;
 		left: 0;
-		top: 1220px;
+		top: 1452px;
 		width: 100%;
 		height: 1180px;
-		// background: #FAFBFC;
-		background: #bbddff;
+		background: #FAFBFC;
+		// background: #cee4fa;
 		z-index: -1;
 
 		@media (max-width: 1024px) {
@@ -32,7 +32,7 @@
 	font-weight: 700;
 	color: #455A64;
 	text-align: center;
-	margin-bottom: 124px;
+	margin-bottom: 115px;
 }
 
 .wrapper {
@@ -49,19 +49,63 @@
 	position: relative;
 }
 
+.info_title {
+	font-size: 21px;
+	line-height: 25px;
+	font-weight: 700;
+	color: #E1E6EE;
+	margin: 0 0 13px 0;
+
+	.num {
+		display: inline-block;
+		font-size: 74px;
+		line-height: 74px;
+		font-weight: 700;
+		font-family: 'Titillium Web', sans-serif;
+	}
+
+	.dot {
+		margin: 0 5px 0 9px;
+	}
+
+	@media (max-width: 895px) {
+		margin: 0 0 13px -5px;
+	}
+}
+
+.info_subtitle {
+	font-size: 21px;
+	line-height: 25px;
+	font-weight: 700;
+	color: #37474F;
+	margin: 0 0 8px 5px;
+}
+
+.info_text {
+	font-size: 16px;
+	line-height: 27px;
+	color: #78909C;
+	margin: 0 0 0 5px;
+
+	@media (max-width: 895px) {
+		margin: 0;
+	}
+}
+
 .applicant__first {
 	margin: 0 0 95px 0;
-	min-height: 652px;
+	min-height: 738px;
 
 	&:after {
 		content: '';
 		position: absolute;
 		top: 0;
 		right: -27px;
-		height: 652px;
+		height: 738px;
 		width: 519px;
-		background-image: url(../public/images/ru/cast-power-1.svg);
+		background-image: url(../../../public/images/applicant-1.png);
 		background-repeat: no-repeat;
+		background-size: contain;
 	}
 
 	&:before {
@@ -70,8 +114,179 @@
 		top: 324px;
 		left: 10px;
 		width: 495px;
-		height: 418px;
-		background-image: url(../public/images/ru/cast-power-line-1.svg);
+		height: 504px;
+		background-image: url(../../../public/images/applicant-line-1.svg);
 		background-repeat: no-repeat;
+	}
+
+	.info {
+		max-width: 411px;
+		padding: 48px 0 0;
+
+		@media (max-width: 1024px) {
+			padding: 24px 0 0;
+		}
+	}
+}
+
+.applicant__second {
+	margin: 0 0 111px 0;
+	min-height: 688px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -25px;
+		width: 448px;
+		height: 688px;
+		background-image: url(../../../public/images/applicant-2.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 282px;
+		left: 489px;
+		width: 16px;
+		height: 528px;
+		background-image: url(../../../public/images/applicant-line-2.svg);
+		background-repeat: no-repeat;
+	}
+
+	.info {
+		max-width: 459px;
+		padding: 22px 0 0;
+		margin-left: auto;
+		margin-right: 6px;
+
+		@media (max-width: 1024px) {
+			margin-right: 4px;
+		}
+
+		@media (max-width: 895px) {
+			margin-right: 0;
+			margin-left: initial;
+			max-width: 395px;
+		}
+	}
+}
+
+.applicant__third {
+	margin: 0 0 168px 0;
+	min-height: 355px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -17px;
+		width: 432px;
+		height: 355px;
+		background-image: url(../../../public/images/applicant-3.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 298px;
+		left: 10px;
+		width: 494px;
+		height: 206px;
+		background-image: url(../../../public/images/applicant-line-3.svg);
+		background-repeat: no-repeat;
+	}
+
+	.info {
+		max-width: 459px;
+		padding: 22px 0 0;
+		margin-left: auto;
+		margin-right: 1px;
+
+		@media (max-width: 1024px) {
+			margin-right: 4px;
+		}
+
+		@media (max-width: 895px) {
+			margin-right: 0;
+			margin-left: initial;
+			max-width: 395px;
+		}
+	}
+}
+
+.applicant__fourth {
+	margin: 0 0 115px 0;
+	min-height: 379px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -19px;
+		width: 503px;
+		height: 379px;
+		background-image: url(../../../public/images/applicant-4.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 284px;
+		left: 10px;
+		width: 495px;
+		height: 207px;
+		background-image: url(../../../public/images/applicant-line-4.svg);
+		background-repeat: no-repeat;
+	}
+
+	.info {
+		max-width: 459px;
+		padding: 8px 0 0;
+
+		@media (max-width: 1024px) {
+			max-width: 406px;
+			padding: 20px 0 0;
+		}
+	}
+}
+
+.applicant__fifth {
+	margin: 0 0 85px 0;
+	min-height: 530px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -25px;
+		width: 452px;
+		height: 530px;
+		background-image: url(../../../public/images/applicant-5.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.info {
+		max-width: 459px;
+		padding: 24px 0 0;
+		margin-left: auto;
+		margin-right: 1px;
+
+		@media (max-width: 1024px) {
+			padding: 31px 0 0;
+			margin-right: 4px;
+		}
+
+		@media (max-width: 895px) {
+			margin-right: 0;
+			margin-left: initial;
+		}
 	}
 }
