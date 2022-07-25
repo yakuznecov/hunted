@@ -1,0 +1,77 @@
+.container {
+	position: relative;
+	height: 100%;
+	margin: 0 0 116px 0;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 1220px;
+		width: 100%;
+		height: 1180px;
+		// background: #FAFBFC;
+		background: #bbddff;
+		z-index: -1;
+
+		@media (max-width: 1024px) {
+			top: 1139px;
+			height: 1231px;
+		}
+
+		@media (max-width: 895px) {
+			top: 1586px;
+			height: 1530px;
+		}
+	}
+}
+
+.title {
+	font-size: 36px;
+	line-height: 41px;
+	font-weight: 700;
+	color: #455A64;
+	text-align: center;
+	margin-bottom: 124px;
+}
+
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	max-width: 940px;
+
+	@media (max-width: 1024px) {
+		max-width: 816px;
+	}
+}
+
+.item {
+	position: relative;
+}
+
+.applicant__first {
+	margin: 0 0 95px 0;
+	min-height: 652px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -27px;
+		height: 652px;
+		width: 519px;
+		background-image: url(../public/images/ru/cast-power-1.svg);
+		background-repeat: no-repeat;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 324px;
+		left: 10px;
+		width: 495px;
+		height: 418px;
+		background-image: url(../public/images/ru/cast-power-line-1.svg);
+		background-repeat: no-repeat;
+	}
+}
