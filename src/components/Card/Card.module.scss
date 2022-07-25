@@ -5,6 +5,7 @@
 	border: 1px solid #CFD8DC;
 	border-radius: 8px;
 	padding: 31px;
+	margin: 0 0 66px;
 }
 
 .title {
@@ -32,6 +33,10 @@
 	padding: 0 0 13px 0;
 	border-bottom: 1px solid #CFD8DC;
 	margin: 0 0 32px 0;
+
+	&.city {
+		margin: 0 0 41px 0;
+	}
 }
 
 .count_num {
@@ -76,7 +81,7 @@
 	line-height: 16px;
 	color: #1681E0;
 	border-bottom: 1px solid #1681E0;
-	margin: 40px 0 0 2px;
+	margin: 40px 0 0 0;
 	transition: all 0.2s;
 
 	@media (hover: hover) {
