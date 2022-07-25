@@ -217,6 +217,76 @@ function Cards() {
 						<img src='images/globe.svg' alt='icon' />
 					</div>
 				</div>
+				<div className={cn(stylesCard.container, stylesCard.department)}>
+					<div>
+						<h2 className={stylesCard.title}>по департаментам</h2>
+						<div className={cn(stylesCard.count, stylesCard.department)}>
+							<span className={stylesCard.count_num}>38</span>
+							<span className={stylesCard.count_text}>Позиций</span>
+						</div>
+						<div className={stylesCard.inner}>
+							<div className={stylesCard.item}>Режиссерский</div>
+							<div className={stylesCard.item}>Операторский</div>
+							<div className={stylesCard.item}>Продюсерский</div>
+							<div className={stylesCard.item}>Административный</div>
+							<div className={stylesCard.item}>Костюмерный</div>
+							<div className={stylesCard.item}>Гримерный</div>
+							<div className={stylesCard.item}>Реквизиторский</div>
+							<div className={stylesCard.item}>Художественный</div>
+							<div className={stylesCard.item}>Транспорный</div>
+							<div className={stylesCard.item}>Сценарный</div>
+						</div>
+						<a href='/' className={stylesCard.link}>
+							Смотреть все
+						</a>
+					</div>
+
+					<div className={stylesCard.icon} style={{ backgroundColor: '#C4BEC4' }}>
+						<img src='images/suitcaseSimple.svg' alt='icon' />
+					</div>
+				</div>
+				<div className={cn(stylesCard.container, stylesCard.professions)}>
+					<div>
+						<h2 className={stylesCard.title}>работа по профессиям</h2>
+						<div className={cn(stylesCard.count, stylesCard.department)}>
+							<span className={stylesCard.count_num}>155</span>
+							<span className={stylesCard.count_text}>Профессий</span>
+						</div>
+						<div className={stylesCard.wrapper}>
+							<div className={stylesCard.inner}>
+								<div className={stylesCard.item}>Режиссер</div>
+								<div className={stylesCard.item}>Оператор</div>
+								<div className={stylesCard.item}>Осветитель</div>
+								<div className={stylesCard.item}>Художник - постановщик</div>
+								<div className={stylesCard.item}>Асс режиссера (хлопушка)</div>
+								<div className={stylesCard.item}>Скрипт - супервайзер</div>
+								<div className={stylesCard.item}>Оператор дрона</div>
+								<div className={stylesCard.item}>Гример</div>
+								<div className={stylesCard.item}>Художник по костюмам</div>
+								<div className={stylesCard.item}>Реквизитор</div>
+							</div>
+							<div className={stylesCard.inner}>
+								<div className={stylesCard.item}>Модель по свету</div>
+								<div className={stylesCard.item}>Консультант по истории </div>
+								<div className={stylesCard.item}>Консультант по оружию</div>
+								<div className={stylesCard.item}>Продюсер постпродакшн</div>
+								<div className={stylesCard.item}>Дресировщики хищников</div>
+								<div className={stylesCard.item}>Кинолог</div>
+								<div className={stylesCard.item}>Языковед</div>
+								<div className={stylesCard.item}>Музыкант</div>
+								<div className={stylesCard.item}>Расскадровщик</div>
+								<div className={stylesCard.item}>Дубляж</div>
+							</div>
+						</div>
+						<a href='/' className={stylesCard.link}>
+							Смотреть все
+						</a>
+					</div>
+
+					<div className={stylesCard.icon} style={{ backgroundColor: '#D1C4B9' }}>
+						<img src='images/users.svg' alt='icon' />
+					</div>
+				</div>
 			</div>
 		</section>
 	);

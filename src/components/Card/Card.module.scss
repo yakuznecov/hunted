@@ -6,6 +6,21 @@
 	border-radius: 8px;
 	padding: 31px;
 	margin: 0 0 66px;
+
+	&.department {
+		height: 528px;
+	}
+
+	&.professions {
+		height: 528px;
+		width: 724px;
+	}
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 75px;
 }
 
 .title {
@@ -36,6 +51,10 @@
 
 	&.city {
 		margin: 0 0 41px 0;
+	}
+
+	&.department {
+		padding: 0 0 9px 0;
 	}
 }
 
