@@ -5,6 +5,10 @@
 	right: 0;
 	z-index: 1000;
 	background-color: #f8faff;
+
+	@media (max-width: 1024px) {
+		background-color: #fff;
+	}
 }
 
 .menu {
@@ -19,6 +23,12 @@
 	background-color: #f8faff;
 	transition: all .3s;
 	z-index: 999;
+
+	@media (max-width: 1024px) {
+		height: 80px;
+		padding: 0 104px 0 102px;
+		background-color: #fff;
+	}
 }
 
 .nav {
@@ -32,13 +42,21 @@
 .list {
 	display: flex;
 	align-items: center;
+
+	@media (max-width: 1024px) {
+		margin-left: auto;
+
+		&:first-child {
+			display: none;
+		}
+	}
 }
 
 .item {
 	margin-left: 40px;
 
 	&:first-child {
-		margin-left: 0;
+		margin-left: 16px;
 	}
 }
 

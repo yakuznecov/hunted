@@ -3,6 +3,12 @@
 	padding-top: 98px;
 	margin: 0 0 124px;
 	background-color: #f8faff;
+
+	@media (max-width: 1024px) {
+		padding-top: 106px;
+		height: 688px;
+		margin: 0 0 80px;
+	}
 }
 
 .wrapper {
@@ -11,9 +17,25 @@
 	margin: 0 auto;
 	max-width: 1123px;
 	min-height: 492px;
-	background-image: url(../../../public/images/top_img-1.svg);
+	background-image: url(../../../public/images/top_img.svg);
 	background-repeat: no-repeat;
 	background-position: 103.5% 0;
+
+	@media (max-width: 1280px) {
+		max-width: 100%;
+		background-position: 93% 0;
+		padding: 0 0 0 80px;
+	}
+
+	@media (max-width: 1160px) {
+		background-position: 128% 0;
+	}
+
+	@media (max-width: 1024px) {
+		background-image: url(../../../public/images/top_img-1024.svg);
+		background-position: 100% 0;
+		padding: 0 0 0 104px;
+	}
 }
 
 .content {

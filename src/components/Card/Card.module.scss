@@ -14,6 +14,14 @@
 	&.professions {
 		height: 528px;
 		width: 724px;
+
+		@media (max-width: 1279px) {
+			width: 329px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		margin: 0 0 67px;
 	}
 }
 
@@ -21,6 +29,18 @@
 	display: flex;
 	justify-content: space-between;
 	padding-right: 75px;
+
+	@media (max-width: 1279px) {
+		padding-right: 0;
+	}
+}
+
+.inner {
+	@media (max-width: 1279px) {
+		&:last-child {
+			display: none;
+		}
+	}
 }
 
 .title {

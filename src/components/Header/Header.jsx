@@ -1,4 +1,5 @@
 import styles from './Header.module.scss';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 function Header() {
 	return (
@@ -30,6 +31,7 @@ function Header() {
 						</li>
 					</ul>
 				</nav>
+				<BurgerMenu />
 			</div>
 		</header>
 	);

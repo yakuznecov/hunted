@@ -15,8 +15,8 @@
 		z-index: -1;
 
 		@media (max-width: 1024px) {
-			top: 1139px;
-			height: 1231px;
+			top: 1173px;
+			height: 1177px;
 		}
 
 		@media (max-width: 895px) {
@@ -117,6 +117,10 @@
 		height: 504px;
 		background-image: url(../../../public/images/applicant-line-1.svg);
 		background-repeat: no-repeat;
+
+		@media (max-width: 895px) {
+			display: none;
+		}
 	}
 
 	.info {
@@ -125,6 +129,27 @@
 
 		@media (max-width: 1024px) {
 			padding: 24px 0 0;
+		}
+	}
+
+	// Media
+	@media (max-width: 1024px) {
+		min-height: 581px;
+		margin: 0 0 84px 0;
+
+		&:after {
+			background-image: url(../../../public/images/applicant-1-1024.png);
+			width: 413px;
+			right: -32px;
+			height: 581px;
+			background-size: contain;
+		}
+
+		&:before {
+			top: 300px;
+			width: 375px;
+			height: 352px;
+			background-image: url(../../../public/images/applicant-line-1-1024.svg);
 		}
 	}
 }
@@ -154,6 +179,10 @@
 		height: 528px;
 		background-image: url(../../../public/images/applicant-line-2.svg);
 		background-repeat: no-repeat;
+
+		@media (max-width: 895px) {
+			display: none;
+		}
 	}
 
 	.info {
@@ -163,13 +192,36 @@
 		margin-right: 6px;
 
 		@media (max-width: 1024px) {
-			margin-right: 4px;
+			margin-right: 1px;
+			padding: 14px 0 0;
 		}
 
 		@media (max-width: 895px) {
 			margin-right: 0;
 			margin-left: initial;
 			max-width: 395px;
+		}
+	}
+
+	// Media
+	@media (max-width: 1024px) {
+		min-height: 534px;
+		margin: 0 0 110px 0;
+
+		&:after {
+			background-image: url(../../../public/images/applicant-2-1024.png);
+			width: 354px;
+			left: -22px;
+			height: 534px;
+			background-size: contain;
+		}
+
+		&:before {
+			top: 274px;
+			left: 369px;
+			width: 16px;
+			height: 361px;
+			background-image: url(../../../public/images/applicant-line-2-1024.svg);
 		}
 	}
 }
@@ -199,6 +251,10 @@
 		height: 206px;
 		background-image: url(../../../public/images/applicant-line-3.svg);
 		background-repeat: no-repeat;
+
+		@media (max-width: 895px) {
+			display: none;
+		}
 	}
 
 	.info {
@@ -208,13 +264,40 @@
 		margin-right: 1px;
 
 		@media (max-width: 1024px) {
-			margin-right: 4px;
+			margin-right: 1px;
+			padding: 18px 0 0;
 		}
 
 		@media (max-width: 895px) {
 			margin-right: 0;
 			margin-left: initial;
 			max-width: 395px;
+		}
+	}
+
+	// Media
+	@media (max-width: 1024px) {
+		min-height: 372px;
+		margin: 0px 0 155px 0;
+
+		&:after {
+			background-image: url(../../../public/images/applicant-3-1024.png);
+			width: 337px;
+			left: -14px;
+			height: 372px;
+			background-size: contain;
+		}
+
+		&:before {
+			top: 303px;
+			left: 10px;
+			width: 375px;
+			height: 217px;
+			background-image: url(../../../public/images/applicant-line-3-1024.svg);
+		}
+
+		.info_subtitle {
+			max-width: 360px;
 		}
 	}
 }
@@ -244,6 +327,10 @@
 		height: 207px;
 		background-image: url(../../../public/images/applicant-line-4.svg);
 		background-repeat: no-repeat;
+
+		@media (max-width: 895px) {
+			display: none;
+		}
 	}
 
 	.info {
@@ -253,6 +340,27 @@
 		@media (max-width: 1024px) {
 			max-width: 406px;
 			padding: 20px 0 0;
+		}
+	}
+
+	// Media
+	@media (max-width: 1024px) {
+		min-height: 327px;
+		margin: 0 0 209px 0;
+
+		&:after {
+			background-image: url(../../../public/images/applicant-4-1024.png);
+			width: 397px;
+			right: -24px;
+			height: 327px;
+			background-size: contain;
+		}
+
+		&:before {
+			top: 296px;
+			width: 375px;
+			height: 244px;
+			background-image: url(../../../public/images/applicant-line-4-1024.svg);
 		}
 	}
 }
@@ -281,12 +389,25 @@
 
 		@media (max-width: 1024px) {
 			padding: 31px 0 0;
-			margin-right: 4px;
+			margin-right: 1px;
 		}
 
 		@media (max-width: 895px) {
 			margin-right: 0;
 			margin-left: initial;
+		}
+	}
+
+	// Media
+	@media (max-width: 1024px) {
+		min-height: 411px;
+
+		&:after {
+			background-image: url(../../../public/images/applicant-5-1024.png);
+			width: 353px;
+			left: -22px;
+			height: 411px;
+			background-size: contain;
 		}
 	}
 }

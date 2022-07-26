@@ -247,7 +247,9 @@ function Cards() {
 				</div>
 				<div className={cn(stylesCard.container, stylesCard.professions)}>
 					<div>
-						<h2 className={stylesCard.title}>работа по профессиям</h2>
+						<h2 className={stylesCard.title}>
+							{window.innerWidth > 1280 ? 'работа по профессиям' : 'по профессиям'}
+						</h2>
 						<div className={cn(stylesCard.count, stylesCard.department)}>
 							<span className={stylesCard.count_num}>155</span>
 							<span className={stylesCard.count_text}>Профессий</span>

@@ -5,6 +5,7 @@ import Top from './components/Top/Top';
 import Cards from './components/Cards/Cards';
 import Content from './components/Content/Content';
 import Join from './components/Join/Join';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Cards />
 			<Content />
 			<Join />
+			<Footer />
 		</div>
 	);
 }
