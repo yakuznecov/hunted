@@ -9,27 +9,37 @@
 					"label": ""
 				},
 				{
-					"line": 94,
+					"line": 28,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 44,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 111,
 					"column": 19,
 					"label": ""
 				},
 				{
-					"line": 156,
+					"line": 208,
 					"column": 20,
 					"label": ""
 				},
 				{
-					"line": 228,
+					"line": 290,
 					"column": 19,
 					"label": ""
 				},
 				{
-					"line": 304,
+					"line": 376,
 					"column": 20,
 					"label": ""
 				},
 				{
-					"line": 367,
+					"line": 450,
 					"column": 19,
 					"label": ""
 				}
@@ -59,23 +69,138 @@
 					"label": ""
 				},
 				{
-					"line": 60,
+					"line": 64,
 					"column": 6,
 					"label": ""
 				},
 				{
-					"line": 74,
+					"line": 82,
 					"column": 7,
 					"label": ""
 				},
 				{
-					"line": 209,
+					"line": 123,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 223,
 					"column": 15,
 					"label": ""
 				},
 				{
-					"line": 263,
+					"line": 277,
 					"column": 22,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/components/Header/Header.module.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 9,
+					"label": ""
+				},
+				{
+					"line": 13,
+					"column": 7,
+					"label": ""
+				},
+				{
+					"line": 41,
+					"column": 6,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/components/Top/Top.module.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 19,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 95,
+					"column": 9,
+					"label": ""
+				},
+				{
+					"line": 107,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 158,
+					"column": 12,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/components/Cards/Cards.module.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 12,
+					"column": 10,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/components/Card/Card.module.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 70,
+					"column": 8,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/components/BurgerMenu/BurgerMenu.module.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 12,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/components/Join/Join.module.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 31,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 58,
+					"column": 6,
 					"label": ""
 				}
 			]

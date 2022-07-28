@@ -29,14 +29,26 @@
 		padding: 0 104px 0 102px;
 		background-color: #fff;
 	}
+
+	@media (max-width: 896px) {
+		padding: 0 40px 0 38px;
+	}
+
+	@media (max-width: 480px) {
+		padding: 0 20px 0 21px;
+	}
 }
 
 .nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 834px;
+	max-width: 849px;
 	width: 100%;
+
+	@media (max-width: 767px) {
+		display: none;
+	}
 }
 
 .list {

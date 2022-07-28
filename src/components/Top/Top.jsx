@@ -11,7 +11,11 @@ function Top() {
 					</h1>
 					<div className={styles.search}>
 						<div className={styles.input__box}>
-							<input className={styles.input} placeholder='Профессия или компания' type='text' />
+							<input
+								className={styles.input}
+								placeholder={window.innerWidth >= 480 ? 'Профессия или компания' : 'Профессия'}
+								type='text'
+							/>
 							<span className={styles.input_icon}>
 								<svg
 									width='20'
@@ -30,7 +34,7 @@ function Top() {
 							</span>
 						</div>
 						<a className={styles.input_btn} href='/'>
-							Найти работу
+							{window.innerWidth >= 480 ? 'Найти работу' : 'Найти'}
 						</a>
 					</div>
 					<a href='/' className={styles.link}>
