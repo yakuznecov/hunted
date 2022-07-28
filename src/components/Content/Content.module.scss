@@ -20,8 +20,8 @@
 		}
 
 		@media (max-width: 895px) {
-			top: 1586px;
-			height: 1530px;
+			top: 1564px;
+			height: 1493px;
 		}
 	}
 }
@@ -33,6 +33,13 @@
 	color: #455A64;
 	text-align: center;
 	margin-bottom: 115px;
+
+	@media (max-width: 895px) {
+		font-size: 30px;
+		line-height: 36px;
+		color: #37474F;
+		margin-bottom: 40px;
+	}
 }
 
 .wrapper {
@@ -42,6 +49,12 @@
 
 	@media (max-width: 1024px) {
 		max-width: 816px;
+	}
+
+	@media (max-width: 895px) {
+		padding: 0 40px 0 45px;
+		margin: 0;
+		max-width: 100%;
 	}
 }
 
@@ -79,6 +92,10 @@
 	font-weight: 700;
 	color: #37474F;
 	margin: 0 0 8px 5px;
+
+	@media (max-width: 895px) {
+		margin: 0 0 8px 0;
+	}
 }
 
 .info_text {
@@ -116,11 +133,6 @@
 		width: 495px;
 		height: 504px;
 		background-image: url(../../../public/images/applicant-line-1.svg);
-		background-repeat: no-repeat;
-
-		@media (max-width: 895px) {
-			display: none;
-		}
 	}
 
 	.info {
@@ -150,6 +162,46 @@
 			width: 375px;
 			height: 352px;
 			background-image: url(../../../public/images/applicant-line-1-1024.svg);
+		}
+	}
+
+	@media (max-width: 895px) {
+		min-height: 872px;
+		margin: 0 0 19px 0;
+
+		&:after {
+			top: 284px;
+			right: initial;
+			left: -31px;
+		}
+
+		&:before {
+			background-image: url(../../../public/images/app-long-line.svg);
+			width: 16px;
+			height: 3086px;
+			top: 72px;
+			left: -33px;
+		}
+	}
+
+	@media (max-width: 425px) {
+		margin: 0 0 6px 0;
+
+		&:after {
+			background-image: url(../public/images/ru/cast-360-power-movie-1.png);
+			width: 356px;
+			top: 338px;
+			right: initial;
+			left: -33px;
+			height: 514px;
+			background-size: contain;
+		}
+
+		&:before {
+			background-image: url(../../../public/images/app-long-line-360.svg);
+			width: 16px;
+			height: 3154px;
+			left: -29px;
 		}
 	}
 }
@@ -222,6 +274,16 @@
 			width: 16px;
 			height: 361px;
 			background-image: url(../../../public/images/applicant-line-2-1024.svg);
+		}
+	}
+
+	@media (max-width: 895px) {
+		min-height: 780px;
+		margin: 0 0 51px 0;
+
+		&:after {
+			top: 274px;
+			left: -31px;
 		}
 	}
 }
@@ -300,6 +362,16 @@
 			max-width: 360px;
 		}
 	}
+
+	@media (max-width: 895px) {
+		min-height: 650px;
+		margin: 0 0 60px 0;
+
+		&:after {
+			top: 301px;
+			left: -22px;
+		}
+	}
 }
 
 .applicant__fourth {
@@ -350,7 +422,7 @@
 
 		&:after {
 			background-image: url(../../../public/images/applicant-4-1024.png);
-			width: 397px;
+			width: 398px;
 			right: -24px;
 			height: 327px;
 			background-size: contain;
@@ -361,6 +433,17 @@
 			width: 375px;
 			height: 244px;
 			background-image: url(../../../public/images/applicant-line-4-1024.svg);
+		}
+	}
+
+	@media (max-width: 895px) {
+		min-height: 590px;
+		margin: 0 0 41px 0;
+
+		&:after {
+			top: 280px;
+			right: initial;
+			left: -23px;
 		}
 	}
 }
@@ -408,6 +491,15 @@
 			left: -22px;
 			height: 411px;
 			background-size: contain;
+		}
+	}
+
+	@media (max-width: 895px) {
+		min-height: 654px;
+
+		&:after {
+			top: 291px;
+			left: -31px;
 		}
 	}
 }
