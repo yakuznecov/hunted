@@ -56,6 +56,10 @@
         margin: 0;
         max-width: 100%;
     }
+
+    @media (max-width: 425px) {
+        padding: 0 20px 0 37px;
+    }
 }
 
 .item {
@@ -95,6 +99,12 @@
 
     @media (max-width: 895px) {
         margin: 0 0 8px 0;
+    }
+
+    @media (min-width: 361px) {
+        br {
+            display: none;
+        }
     }
 }
 
@@ -286,6 +296,15 @@
             left: -31px;
         }
     }
+
+    @media (max-width: 425px) {
+        min-height: 806px;
+
+        &:after {
+            top: 301px;
+            left: -33px;
+        }
+    }
 }
 
 .applicant__third {
@@ -372,6 +391,15 @@
             left: -22px;
         }
     }
+
+    @media (max-width: 425px) {
+        min-height: 678px;
+
+        &:after {
+            top: 329px;
+            left: -24px;
+        }
+    }
 }
 
 .applicant__fourth {
@@ -446,6 +474,20 @@
             left: -23px;
         }
     }
+
+    @media (max-width: 425px) {
+        min-height: 617px;
+
+        &:after {
+            background-image: url(../../../public/images/applicant-4-360.png);
+            width: 348px;
+            top: 307px;
+            right: initial;
+            left: -25px;
+            height: 326px;
+            background-size: contain;
+        }
+    }
 }
 
 .applicant__fifth {
@@ -500,6 +542,15 @@
         &:after {
             top: 291px;
             left: -31px;
+        }
+    }
+
+    @media (max-width: 425px) {
+        min-height: 681px;
+
+        &:after {
+            top: 318px;
+            left: -33px;
         }
     }
 }

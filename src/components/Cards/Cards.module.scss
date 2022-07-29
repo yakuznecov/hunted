@@ -1,31 +1,35 @@
 .container {
-	margin: 0 0 107px;
+    margin: 0 0 107px;
 
-	@media (max-width: 1024px) {
-		margin: 0 0 106px;
-	}
+    @media (max-width: 1024px) {
+        margin: 0 0 106px;
+    }
 
-	@media (max-width: 895px) {
-		margin: 0 0 76px;
-	}
+    @media (max-width: 895px) {
+        margin: 0 0 76px;
+    }
 }
 
 .wrapper {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	max-width: 1120px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1120px;
+    margin: 0 auto;
 
-	@media (max-width: 1279px) {
-		max-width: 725px;
-	}
+    @media (max-width: 1279px) {
+        max-width: 725px;
+    }
 
-	@media (max-width: 768px) {
-		max-width: 688px;
-	}
+    @media (max-width: 768px) {
+        max-width: 688px;
+    }
 
-	@media (max-width: 767px) {
-		max-width: 329px;
-	}
+    @media (max-width: 767px) {
+        max-width: 329px;
+    }
+
+    @media (max-width: 425px) {
+        max-width: 321px;
+    }
 }
