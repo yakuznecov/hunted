@@ -9,7 +9,7 @@ import Join from './components/Join/Join';
 import Footer from './components/Footer/Footer';
 
 function App() {
-    const [activePage, setActivePage] = useState('applicant');
+    const [activePage, setActivePage] = useState('employer');
 
     const switchActivePage = (page, e) => {
         setActivePage(page);
@@ -18,7 +18,7 @@ function App() {
     return (
         <div className="App">
             <Header onSwitch={switchActivePage} active={activePage} />
-            <Top />
+            <Top active={activePage} />
             {activePage === 'applicant' && <Cards />}
 
             <Content />
