@@ -204,6 +204,31 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "src/components/Resumes/Resumes.module.scss",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 8,
+					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 13,
+					"column": 9,
+					"label": ""
+				},
+				{
+					"line": 23,
+					"column": 8,
+					"label": ""
+				}
+			]
 		}
 	]
 }
