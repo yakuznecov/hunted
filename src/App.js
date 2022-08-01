@@ -20,10 +20,10 @@ function App() {
         <div className="App">
             <Header onSwitch={switchActivePage} active={activePage} />
             <Top active={activePage} />
-            {activePage === 'applicant' && <Cards />}
+            {activePage === 'applicant' && <Cards active={activePage} />}
             {activePage === 'employer' && <Resumes />}
             {activePage === 'employer' && <Cards active={activePage} />}
-            <Content />
+            <Content active={activePage} />
             <Join />
             <Footer />
         </div>

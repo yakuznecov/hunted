@@ -11,13 +11,19 @@ function Header({ onSwitch, active }) {
                 </a>
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
-                        <li className={styles.item} onClick={(e) => onSwitch('applicant', e)}>
+                        <li
+                            className={`${styles.item} ${active === 'employer' ? styles.employer : ''}`}
+                            onClick={(e) => onSwitch('applicant', e)}
+                        >
                             <span className={styles.title}>Соискателям</span>
                         </li>
-                        <li className={styles.item} onClick={(e) => onSwitch('employer', e)}>
+                        <li
+                            className={`${styles.item} ${active === 'employer' ? styles.employer : ''}`}
+                            onClick={(e) => onSwitch('employer', e)}
+                        >
                             <span className={styles.title}>Работодателям</span>
                         </li>
-                        <li className={styles.item}>
+                        <li className={`${styles.item} ${active === 'employer' ? styles.employer : ''}`}>
                             <span className={styles.title}>Тарифные планы</span>
                         </li>
                     </ul>

@@ -1,464 +1,236 @@
 import React, { useState } from 'react';
 import styles from './Cards.module.scss';
-import stylesCard from '../Card/Card.module.scss';
-import Card from '../Card/Card';
 import cn from 'classnames';
 
 function Cards({ active }) {
-    const cards = [
-        {
-            id: 1,
-            title: 'Вакансии дня',
-            total: 24,
-            min: '40 000',
-            max: '300 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Администратор площадки',
-                },
-                {
-                    id: 2,
-                    title: 'Помощник режиссера',
-                },
-                {
-                    id: 3,
-                    title: 'Звукорежиссер',
-                },
-                {
-                    id: 4,
-                    title: 'Каскадер',
-                },
-                {
-                    id: 5,
-                    title: 'Оператор - постановщик',
-                },
-                {
-                    id: 6,
-                    title: '2-ой режиссер',
-                },
-            ],
-            link: 18,
-        },
-        {
-            id: 2,
-            title: 'горячие вакансии',
-            total: 14,
-            min: '2 000',
-            max: '35 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Хлопушка',
-                },
-                {
-                    id: 2,
-                    title: 'Консультант по животным',
-                },
-                {
-                    id: 3,
-                    title: 'Рабочий на площадку',
-                },
-                {
-                    id: 4,
-                    title: 'Декоратор',
-                },
-                {
-                    id: 5,
-                    title: 'Оператор - постановщик',
-                },
-                {
-                    id: 6,
-                    title: 'Работник сцены',
-                },
-            ],
-            link: 8,
-        },
-        {
-            id: 3,
-            title: 'компании дня',
-            total: 108,
-            min: '50 000',
-            max: '270 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Базилевс',
-                },
-                {
-                    id: 2,
-                    title: 'Первый канал',
-                },
-                {
-                    id: 3,
-                    title: 'Студия Первоцвет',
-                },
-                {
-                    id: 4,
-                    title: 'Военфильм',
-                },
-                {
-                    id: 5,
-                    title: '2х2 продакшн',
-                },
-                {
-                    id: 6,
-                    title: 'Единая Медиа Группа',
-                },
-            ],
-        },
-        {
-            id: 4,
-            title: 'вакансии в Москве',
-            total: 1512,
-            min: '75 000',
-            max: '380 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Кастинг - директор',
-                },
-                {
-                    id: 2,
-                    title: 'Художник по костюмам',
-                },
-                {
-                    id: 3,
-                    title: 'Асс художника по костюмам',
-                },
-                {
-                    id: 4,
-                    title: 'Каскадер',
-                },
-                {
-                    id: 5,
-                    title: 'Реквизитор',
-                },
-                {
-                    id: 6,
-                    title: '2-ой режиссер',
-                },
-            ],
-            link: 1506,
-        },
-        {
-            id: 5,
-            title: 'вакансии в спб',
-            total: 968,
-            min: '50 000',
-            max: '290 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'CG Супервайзер',
-                },
-                {
-                    id: 2,
-                    title: 'Военный консультант',
-                },
-                {
-                    id: 3,
-                    title: 'Звукорежиссер',
-                },
-                {
-                    id: 4,
-                    title: 'Хореограф',
-                },
-                {
-                    id: 5,
-                    title: 'Оператор - постановщик',
-                },
-                {
-                    id: 6,
-                    title: 'Асс по реквизиту',
-                },
-            ],
-            link: 962,
-        },
-    ];
-
-    const cardsEmployer = [
-        {
-            id: 1,
-            title: 'Кандидаты в Москве',
-            total: 1512,
-            min: '40 000',
-            max: '300 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Администратор площадки',
-                },
-                {
-                    id: 2,
-                    title: 'Помощник режиссера',
-                },
-                {
-                    id: 3,
-                    title: 'Звукорежиссер',
-                },
-                {
-                    id: 4,
-                    title: 'Каскадер',
-                },
-                {
-                    id: 5,
-                    title: 'Оператор - постановщик',
-                },
-                {
-                    id: 6,
-                    title: '2-ой режиссер',
-                },
-            ],
-            link: 18,
-        },
-        {
-            id: 2,
-            title: 'горячие вакансии',
-            total: 14,
-            min: '2 000',
-            max: '35 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Хлопушка',
-                },
-                {
-                    id: 2,
-                    title: 'Консультант по животным',
-                },
-                {
-                    id: 3,
-                    title: 'Рабочий на площадку',
-                },
-                {
-                    id: 4,
-                    title: 'Декоратор',
-                },
-                {
-                    id: 5,
-                    title: 'Оператор - постановщик',
-                },
-                {
-                    id: 6,
-                    title: 'Работник сцены',
-                },
-            ],
-            link: 8,
-        },
-        {
-            id: 3,
-            title: 'компании дня',
-            total: 108,
-            min: '50 000',
-            max: '270 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Базилевс',
-                },
-                {
-                    id: 2,
-                    title: 'Первый канал',
-                },
-                {
-                    id: 3,
-                    title: 'Студия Первоцвет',
-                },
-                {
-                    id: 4,
-                    title: 'Военфильм',
-                },
-                {
-                    id: 5,
-                    title: '2х2 продакшн',
-                },
-                {
-                    id: 6,
-                    title: 'Единая Медиа Группа',
-                },
-            ],
-        },
-        {
-            id: 4,
-            title: 'вакансии в Москве',
-            total: 1512,
-            min: '75 000',
-            max: '380 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'Кастинг - директор',
-                },
-                {
-                    id: 2,
-                    title: 'Художник по костюмам',
-                },
-                {
-                    id: 3,
-                    title: 'Асс художника по костюмам',
-                },
-                {
-                    id: 4,
-                    title: 'Каскадер',
-                },
-                {
-                    id: 5,
-                    title: 'Реквизитор',
-                },
-                {
-                    id: 6,
-                    title: '2-ой режиссер',
-                },
-            ],
-            link: 1506,
-        },
-        {
-            id: 5,
-            title: 'вакансии в спб',
-            total: 968,
-            min: '50 000',
-            max: '290 000',
-            list: [
-                {
-                    id: 1,
-                    title: 'CG Супервайзер',
-                },
-                {
-                    id: 2,
-                    title: 'Военный консультант',
-                },
-                {
-                    id: 3,
-                    title: 'Звукорежиссер',
-                },
-                {
-                    id: 4,
-                    title: 'Хореограф',
-                },
-                {
-                    id: 5,
-                    title: 'Оператор - постановщик',
-                },
-                {
-                    id: 6,
-                    title: 'Асс по реквизиту',
-                },
-            ],
-            link: 962,
-        },
-    ];
-
-    const iconCards = [
-        { color: '#a6e1bf', path: 'images/rocketLaunch.svg' },
-        { color: '#ffb097', path: 'images/fire.svg' },
-        { color: '#a8e8ec', path: 'images/leaf.svg' },
-        { color: '#bbccc8', path: 'images/buildings.svg' },
-        { color: '#b0d2c1', path: 'images/maskHappy.svg' },
-    ];
-
     return (
         <section className={styles.container}>
             {active === 'applicant' && (
                 <div className={styles.wrapper}>
-                    {cards.map((card, index) => (
-                        <Card cards={card} iconCard={iconCards[index]} key={card.id} />
-                    ))}
-
-                    <div className={stylesCard.container}>
+                    <div className={styles.card__container}>
                         <div>
-                            <h2 className={stylesCard.title}>другие города</h2>
-                            <div className={cn(stylesCard.count, stylesCard.city)}>
-                                <span className={stylesCard.count_num}>125</span>
-                                <span className={stylesCard.count_text}>Городов</span>
+                            <h2 className={styles.title}>вакансии дня</h2>
+                            <div className={styles.count}>
+                                <span className={styles.count_num}>24</span>
+                                <span className={styles.count_text}>Вакансии</span>
                             </div>
-                            <div className={stylesCard.inner}>
-                                <div className={stylesCard.item}>Минск</div>
-                                <div className={stylesCard.item}>Сочи</div>
-                                <div className={stylesCard.item}>Краснодар</div>
-                                <div className={stylesCard.item}>Владивосток</div>
-                                <div className={stylesCard.item}>Тверь</div>
-                                <div className={stylesCard.item}>Нижний Новгород</div>
-                                <div className={stylesCard.item}>Архангельск</div>
+                            <div className={styles.sum}>40 000 - 300 000 руб.</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Администратор площадки</div>
+                                <div className={styles.item}>Помощник режиссера</div>
+                                <div className={styles.item}>Звукорежиссер</div>
+                                <div className={styles.item}>Каскадер</div>
+                                <div className={styles.item}>Оператор - постановщик</div>
+                                <div className={styles.item}>2-ой режиссер</div>
                             </div>
-                            <a href="/" className={stylesCard.link}>
+                            <a href="/" className={styles.link}>
+                                Ещё 18 профессий
+                            </a>
+                        </div>
+
+                        <div className={styles.icon} style={{ backgroundColor: '#a6e1bf' }}>
+                            <img src="images/rocketLaunch.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div className={styles.card__container}>
+                        <div>
+                            <h2 className={styles.title}>Горячие вакансии</h2>
+                            <div className={styles.count}>
+                                <span className={styles.count_num}>14</span>
+                                <span className={styles.count_text}>Вакансий</span>
+                            </div>
+                            <div className={styles.sum}>2 000 - 35 000 руб.</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Хлопушка</div>
+                                <div className={styles.item}>Консультант по животным</div>
+                                <div className={styles.item}>Рабочий на площадку</div>
+                                <div className={styles.item}>Декоратор</div>
+                                <div className={styles.item}>Оператор - постановщик</div>
+                                <div className={styles.item}>Работник сцены</div>
+                            </div>
+                            <a href="/" className={styles.link}>
+                                Ещё 8 профессий
+                            </a>
+                        </div>
+
+                        <div className={styles.icon} style={{ backgroundColor: '#ffb097' }}>
+                            <img src="images/fire.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div className={styles.card__container}>
+                        <div>
+                            <h2 className={styles.title}>Компании дня</h2>
+                            <div className={styles.count}>
+                                <span className={styles.count_num}>108</span>
+                                <span className={styles.count_text}>Компаний</span>
+                            </div>
+                            <div className={styles.sum}>50 000 - 270 000 руб.</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Базилевс</div>
+                                <div className={styles.item}>Первый канал</div>
+                                <div className={styles.item}>Студия Первоцвет</div>
+                                <div className={styles.item}>Военфильм</div>
+                                <div className={styles.item}>2х2 продакшн</div>
+                                <div className={styles.item}>Единая Медиа Группа</div>
+                            </div>
+                            <a href="/" className={styles.link}>
+                                Все компании
+                            </a>
+                        </div>
+
+                        <div className={styles.icon} style={{ backgroundColor: '#a8e8ec' }}>
+                            <img src="images/leaf.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div className={styles.card__container}>
+                        <div>
+                            <h2 className={styles.title}>Вакансии в Москве</h2>
+                            <div className={styles.count}>
+                                <span className={styles.count_num}>1512</span>
+                                <span className={styles.count_text}>Вакансий</span>
+                            </div>
+                            <div className={styles.sum}>75 000 - 380 000 руб.</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Кастинг - директор</div>
+                                <div className={styles.item}>Художник по костюмам</div>
+                                <div className={styles.item}>Асс художника по костюмам</div>
+                                <div className={styles.item}>Каскадер</div>
+                                <div className={styles.item}>Реквизитор</div>
+                                <div className={styles.item}>2-ой режиссер</div>
+                            </div>
+                            <a href="/" className={styles.link}>
+                                Ещё 1506 профессий
+                            </a>
+                        </div>
+
+                        <div className={styles.icon} style={{ backgroundColor: '#bbccc8' }}>
+                            <img src="images/buildings.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div className={styles.card__container}>
+                        <div>
+                            <h2 className={styles.title}>Вакансии в СПБ</h2>
+                            <div className={styles.count}>
+                                <span className={styles.count_num}>968</span>
+                                <span className={styles.count_text}>Вакансий</span>
+                            </div>
+                            <div className={styles.sum}>50 000 - 290 000 руб.</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>CG Супервайзер</div>
+                                <div className={styles.item}>Военный консультант</div>
+                                <div className={styles.item}>Звукорежиссер</div>
+                                <div className={styles.item}>Хореограф</div>
+                                <div className={styles.item}>Оператор - постановщик</div>
+                                <div className={styles.item}>Асс по реквизиту</div>
+                            </div>
+                            <a href="/" className={styles.link}>
+                                Ещё 1506 профессий
+                            </a>
+                        </div>
+
+                        <div className={styles.icon} style={{ backgroundColor: '#b0d2c1' }}>
+                            <img src="images/maskHappy.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div className={styles.card__container}>
+                        <div>
+                            <h2 className={styles.title}>другие города</h2>
+                            <div className={cn(styles.count, styles.city)}>
+                                <span className={styles.count_num}>125</span>
+                                <span className={styles.count_text}>Городов</span>
+                            </div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Минск</div>
+                                <div className={styles.item}>Сочи</div>
+                                <div className={styles.item}>Краснодар</div>
+                                <div className={styles.item}>Владивосток</div>
+                                <div className={styles.item}>Тверь</div>
+                                <div className={styles.item}>Нижний Новгород</div>
+                                <div className={styles.item}>Архангельск</div>
+                            </div>
+                            <a href="/" className={styles.link}>
                                 Все города
                             </a>
                         </div>
 
-                        <div className={stylesCard.icon} style={{ backgroundColor: '#c2d4ff' }}>
+                        <div className={styles.icon} style={{ backgroundColor: '#c2d4ff' }}>
                             <img src="images/globe.svg" alt="icon" />
                         </div>
                     </div>
-                    <div className={cn(stylesCard.container, stylesCard.department)}>
+                    <div className={cn(styles.card__container, styles.department)}>
                         <div>
-                            <h2 className={stylesCard.title}>по департаментам</h2>
-                            <div className={cn(stylesCard.count, stylesCard.department)}>
-                                <span className={stylesCard.count_num}>38</span>
-                                <span className={stylesCard.count_text}>Позиций</span>
+                            <h2 className={styles.title}>по департаментам</h2>
+                            <div className={cn(styles.count, styles.department)}>
+                                <span className={styles.count_num}>38</span>
+                                <span className={styles.count_text}>Позиций</span>
                             </div>
-                            <div className={stylesCard.inner}>
-                                <div className={stylesCard.item}>Режиссерский</div>
-                                <div className={stylesCard.item}>Операторский</div>
-                                <div className={stylesCard.item}>Продюсерский</div>
-                                <div className={stylesCard.item}>Административный</div>
-                                <div className={stylesCard.item}>Костюмерный</div>
-                                <div className={stylesCard.item}>Гримерный</div>
-                                <div className={stylesCard.item}>Реквизиторский</div>
-                                <div className={stylesCard.item}>Художественный</div>
-                                <div className={stylesCard.item}>Транспорный</div>
-                                <div className={stylesCard.item}>Сценарный</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Режиссерский</div>
+                                <div className={styles.item}>Операторский</div>
+                                <div className={styles.item}>Продюсерский</div>
+                                <div className={styles.item}>Административный</div>
+                                <div className={styles.item}>Костюмерный</div>
+                                <div className={styles.item}>Гримерный</div>
+                                <div className={styles.item}>Реквизиторский</div>
+                                <div className={styles.item}>Художественный</div>
+                                <div className={styles.item}>Транспорный</div>
+                                <div className={styles.item}>Сценарный</div>
                             </div>
-                            <a href="/" className={stylesCard.link}>
+                            <a href="/" className={styles.link}>
                                 Смотреть все
                             </a>
                         </div>
 
-                        <div className={stylesCard.icon} style={{ backgroundColor: '#C4BEC4' }}>
+                        <div className={styles.icon} style={{ backgroundColor: '#C4BEC4' }}>
                             <img src="images/suitcaseSimple.svg" alt="icon" />
                         </div>
                     </div>
-                    <div className={cn(stylesCard.container, stylesCard.professions)}>
+                    <div className={cn(styles.card__container, styles.professions)}>
                         <div>
-                            <h2 className={stylesCard.title}>
+                            <h2 className={styles.title}>
                                 {window.innerWidth > 1280 ? 'работа по профессиям' : 'по профессиям'}
                             </h2>
-                            <div className={cn(stylesCard.count, stylesCard.department)}>
-                                <span className={stylesCard.count_num}>155</span>
-                                <span className={stylesCard.count_text}>Профессий</span>
+                            <div className={cn(styles.count, styles.department)}>
+                                <span className={styles.count_num}>155</span>
+                                <span className={styles.count_text}>Профессий</span>
                             </div>
-                            <div className={stylesCard.wrapper}>
-                                <div className={stylesCard.inner}>
-                                    <div className={stylesCard.item}>Режиссер</div>
-                                    <div className={stylesCard.item}>Оператор</div>
-                                    <div className={stylesCard.item}>Осветитель</div>
-                                    <div className={stylesCard.item}>Художник - постановщик</div>
-                                    <div className={stylesCard.item}>Асс режиссера (хлопушка)</div>
-                                    <div className={stylesCard.item}>Скрипт - супервайзер</div>
-                                    <div className={stylesCard.item}>Оператор дрона</div>
-                                    <div className={stylesCard.item}>Гример</div>
-                                    <div className={stylesCard.item}>Художник по костюмам</div>
-                                    <div className={stylesCard.item}>Реквизитор</div>
+                            <div className={styles.wrapper}>
+                                <div className={styles.inner}>
+                                    <div className={styles.item}>Режиссер</div>
+                                    <div className={styles.item}>Оператор</div>
+                                    <div className={styles.item}>Осветитель</div>
+                                    <div className={styles.item}>Художник - постановщик</div>
+                                    <div className={styles.item}>Асс режиссера (хлопушка)</div>
+                                    <div className={styles.item}>Скрипт - супервайзер</div>
+                                    <div className={styles.item}>Оператор дрона</div>
+                                    <div className={styles.item}>Гример</div>
+                                    <div className={styles.item}>Художник по костюмам</div>
+                                    <div className={styles.item}>Реквизитор</div>
                                 </div>
-                                <div className={stylesCard.inner}>
-                                    <div className={stylesCard.item}>Модель по свету</div>
-                                    <div className={stylesCard.item}>Консультант по истории </div>
-                                    <div className={stylesCard.item}>Консультант по оружию</div>
-                                    <div className={stylesCard.item}>Продюсер постпродакшн</div>
-                                    <div className={stylesCard.item}>Дресировщики хищников</div>
-                                    <div className={stylesCard.item}>Кинолог</div>
-                                    <div className={stylesCard.item}>Языковед</div>
-                                    <div className={stylesCard.item}>Музыкант</div>
-                                    <div className={stylesCard.item}>Расскадровщик</div>
-                                    <div className={stylesCard.item}>Дубляж</div>
+                                <div className={styles.inner}>
+                                    <div className={styles.item}>Модель по свету</div>
+                                    <div className={styles.item}>Консультант по истории </div>
+                                    <div className={styles.item}>Консультант по оружию</div>
+                                    <div className={styles.item}>Продюсер постпродакшн</div>
+                                    <div className={styles.item}>Дресировщики хищников</div>
+                                    <div className={styles.item}>Кинолог</div>
+                                    <div className={styles.item}>Языковед</div>
+                                    <div className={styles.item}>Музыкант</div>
+                                    <div className={styles.item}>Расскадровщик</div>
+                                    <div className={styles.item}>Дубляж</div>
                                 </div>
                             </div>
-                            <a href="/" className={stylesCard.link}>
+                            <a href="/" className={styles.link}>
                                 Смотреть все
                             </a>
                         </div>
 
-                        <div className={stylesCard.icon} style={{ backgroundColor: '#D1C4B9' }}>
+                        <div className={styles.icon} style={{ backgroundColor: '#D1C4B9' }}>
                             <img src="images/users.svg" alt="icon" />
                         </div>
                     </div>
@@ -467,104 +239,150 @@ function Cards({ active }) {
 
             {active === 'employer' && (
                 <div className={styles.wrapper}>
-                    {cards.map((card, index) => (
-                        <Card cardsEmployer={card} iconCard={iconCards[index]} key={card.id} />
-                    ))}
-
-                    <div className={stylesCard.container}>
+                    <div className={styles.card__container}>
                         <div>
-                            <h2 className={stylesCard.title}>другие города</h2>
-                            <div className={cn(stylesCard.count, stylesCard.city)}>
-                                <span className={stylesCard.count_num}>125</span>
-                                <span className={stylesCard.count_text}>Городов</span>
+                            <h2 className={styles.title}>Кандидаты в Москве</h2>
+                            <div className={styles.count}>
+                                <span className={styles.count_num}>1512</span>
+                                <span className={styles.count_text}>Резюме</span>
                             </div>
-                            <div className={stylesCard.inner}>
-                                <div className={stylesCard.item}>Минск</div>
-                                <div className={stylesCard.item}>Сочи</div>
-                                <div className={stylesCard.item}>Краснодар</div>
-                                <div className={stylesCard.item}>Владивосток</div>
-                                <div className={stylesCard.item}>Тверь</div>
-                                <div className={stylesCard.item}>Нижний Новгород</div>
-                                <div className={stylesCard.item}>Архангельск</div>
+                            <div className={styles.sum}>75 000 - 380 000 руб.</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Кастинг - директор</div>
+                                <div className={styles.item}>Художник по костюмам</div>
+                                <div className={styles.item}>Асс художника по костюмам</div>
+                                <div className={styles.item}>Каскадер</div>
+                                <div className={styles.item}>Реквизитор</div>
+                                <div className={styles.item}>2-ой режиссер</div>
                             </div>
-                            <a href="/" className={stylesCard.link}>
+                            <a href="/" className={styles.link}>
+                                Ещё 1506 резюме
+                            </a>
+                        </div>
+
+                        <div className={styles.icon} style={{ backgroundColor: '#bbccc8' }}>
+                            <img src="images/buildings.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div className={styles.card__container}>
+                        <div>
+                            <h2 className={styles.title}>Кандидаты в СПБ</h2>
+                            <div className={styles.count}>
+                                <span className={styles.count_num}>968</span>
+                                <span className={styles.count_text}>Резюме</span>
+                            </div>
+                            <div className={styles.sum}>50 000 - 290 000 руб.</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>CG Супервайзер</div>
+                                <div className={styles.item}>Военный консультант</div>
+                                <div className={styles.item}>Звукорежиссер</div>
+                                <div className={styles.item}>Хореограф</div>
+                                <div className={styles.item}>Оператор - постановщик</div>
+                                <div className={styles.item}>Асс по реквизиту</div>
+                            </div>
+                            <a href="/" className={styles.link}>
+                                Ещё 962 резюме
+                            </a>
+                        </div>
+
+                        <div className={styles.icon} style={{ backgroundColor: '#b0d2c1' }}>
+                            <img src="images/maskHappy.svg" alt="icon" />
+                        </div>
+                    </div>
+
+                    <div className={styles.card__container}>
+                        <div>
+                            <h2 className={styles.title}>другие города</h2>
+                            <div className={cn(styles.count, styles.city)}>
+                                <span className={styles.count_num}>125</span>
+                                <span className={styles.count_text}>Городов</span>
+                            </div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Минск</div>
+                                <div className={styles.item}>Сочи</div>
+                                <div className={styles.item}>Краснодар</div>
+                                <div className={styles.item}>Владивосток</div>
+                                <div className={styles.item}>Тверь</div>
+                                <div className={styles.item}>Нижний Новгород</div>
+                                <div className={styles.item}>Архангельск</div>
+                            </div>
+                            <a href="/" className={styles.link}>
                                 Все города
                             </a>
                         </div>
 
-                        <div className={stylesCard.icon} style={{ backgroundColor: '#c2d4ff' }}>
+                        <div className={styles.icon} style={{ backgroundColor: '#c2d4ff' }}>
                             <img src="images/globe.svg" alt="icon" />
                         </div>
                     </div>
-                    <div className={cn(stylesCard.container, stylesCard.department)}>
+                    <div className={cn(styles.card__container, styles.department)}>
                         <div>
-                            <h2 className={stylesCard.title}>по департаментам</h2>
-                            <div className={cn(stylesCard.count, stylesCard.department)}>
-                                <span className={stylesCard.count_num}>38</span>
-                                <span className={stylesCard.count_text}>Позиций</span>
+                            <h2 className={styles.title}>по департаментам</h2>
+                            <div className={cn(styles.count, styles.department)}>
+                                <span className={styles.count_num}>38</span>
+                                <span className={styles.count_text}>Позиций</span>
                             </div>
-                            <div className={stylesCard.inner}>
-                                <div className={stylesCard.item}>Режиссерский</div>
-                                <div className={stylesCard.item}>Операторский</div>
-                                <div className={stylesCard.item}>Продюсерский</div>
-                                <div className={stylesCard.item}>Административный</div>
-                                <div className={stylesCard.item}>Костюмерный</div>
-                                <div className={stylesCard.item}>Гримерный</div>
-                                <div className={stylesCard.item}>Реквизиторский</div>
-                                <div className={stylesCard.item}>Художественный</div>
-                                <div className={stylesCard.item}>Транспорный</div>
-                                <div className={stylesCard.item}>Сценарный</div>
+                            <div className={styles.inner}>
+                                <div className={styles.item}>Режиссерский</div>
+                                <div className={styles.item}>Операторский</div>
+                                <div className={styles.item}>Продюсерский</div>
+                                <div className={styles.item}>Административный</div>
+                                <div className={styles.item}>Костюмерный</div>
+                                <div className={styles.item}>Гримерный</div>
+                                <div className={styles.item}>Реквизиторский</div>
+                                <div className={styles.item}>Художественный</div>
+                                <div className={styles.item}>Транспорный</div>
+                                <div className={styles.item}>Сценарный</div>
                             </div>
-                            <a href="/" className={stylesCard.link}>
+                            <a href="/" className={styles.link}>
                                 Смотреть все
                             </a>
                         </div>
 
-                        <div className={stylesCard.icon} style={{ backgroundColor: '#C4BEC4' }}>
+                        <div className={styles.icon} style={{ backgroundColor: '#C4BEC4' }}>
                             <img src="images/suitcaseSimple.svg" alt="icon" />
                         </div>
                     </div>
-                    <div className={cn(stylesCard.container, stylesCard.professions)}>
+                    <div className={cn(styles.card__container, styles.professions)}>
                         <div>
-                            <h2 className={stylesCard.title}>
-                                {window.innerWidth > 1280 ? 'работа по профессиям' : 'по профессиям'}
-                            </h2>
-                            <div className={cn(stylesCard.count, stylesCard.department)}>
-                                <span className={stylesCard.count_num}>155</span>
-                                <span className={stylesCard.count_text}>Профессий</span>
+                            <h2 className={styles.title}>Резюме по профессиям</h2>
+                            <div className={cn(styles.count, styles.department)}>
+                                <span className={styles.count_num}>155</span>
+                                <span className={styles.count_text}>Профессий</span>
                             </div>
-                            <div className={stylesCard.wrapper}>
-                                <div className={stylesCard.inner}>
-                                    <div className={stylesCard.item}>Режиссер</div>
-                                    <div className={stylesCard.item}>Оператор</div>
-                                    <div className={stylesCard.item}>Осветитель</div>
-                                    <div className={stylesCard.item}>Художник - постановщик</div>
-                                    <div className={stylesCard.item}>Асс режиссера (хлопушка)</div>
-                                    <div className={stylesCard.item}>Скрипт - супервайзер</div>
-                                    <div className={stylesCard.item}>Оператор дрона</div>
-                                    <div className={stylesCard.item}>Гример</div>
-                                    <div className={stylesCard.item}>Художник по костюмам</div>
-                                    <div className={stylesCard.item}>Реквизитор</div>
+                            <div className={styles.wrapper}>
+                                <div className={styles.inner}>
+                                    <div className={styles.item}>Режиссер</div>
+                                    <div className={styles.item}>Оператор</div>
+                                    <div className={styles.item}>Осветитель</div>
+                                    <div className={styles.item}>Художник - постановщик</div>
+                                    <div className={styles.item}>Асс режиссера (хлопушка)</div>
+                                    <div className={styles.item}>Скрипт - супервайзер</div>
+                                    <div className={styles.item}>Оператор дрона</div>
+                                    <div className={styles.item}>Гример</div>
+                                    <div className={styles.item}>Художник по костюмам</div>
+                                    <div className={styles.item}>Реквизитор</div>
                                 </div>
-                                <div className={stylesCard.inner}>
-                                    <div className={stylesCard.item}>Модель по свету</div>
-                                    <div className={stylesCard.item}>Консультант по истории </div>
-                                    <div className={stylesCard.item}>Консультант по оружию</div>
-                                    <div className={stylesCard.item}>Продюсер постпродакшн</div>
-                                    <div className={stylesCard.item}>Дресировщики хищников</div>
-                                    <div className={stylesCard.item}>Кинолог</div>
-                                    <div className={stylesCard.item}>Языковед</div>
-                                    <div className={stylesCard.item}>Музыкант</div>
-                                    <div className={stylesCard.item}>Расскадровщик</div>
-                                    <div className={stylesCard.item}>Дубляж</div>
+                                <div className={styles.inner}>
+                                    <div className={styles.item}>Модель по свету</div>
+                                    <div className={styles.item}>Консультант по истории </div>
+                                    <div className={styles.item}>Консультант по оружию</div>
+                                    <div className={styles.item}>Продюсер постпродакшн</div>
+                                    <div className={styles.item}>Дресировщики хищников</div>
+                                    <div className={styles.item}>Кинолог</div>
+                                    <div className={styles.item}>Языковед</div>
+                                    <div className={styles.item}>Музыкант</div>
+                                    <div className={styles.item}>Расскадровщик</div>
+                                    <div className={styles.item}>Дубляж</div>
                                 </div>
                             </div>
-                            <a href="/" className={stylesCard.link}>
+                            <a href="/" className={styles.link}>
                                 Смотреть все
                             </a>
                         </div>
 
-                        <div className={stylesCard.icon} style={{ backgroundColor: '#D1C4B9' }}>
+                        <div className={styles.icon} style={{ backgroundColor: '#D1C4B9' }}>
                             <img src="images/users.svg" alt="icon" />
                         </div>
                     </div>

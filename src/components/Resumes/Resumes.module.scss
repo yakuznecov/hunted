@@ -1,24 +1,20 @@
 .container {
 	position: relative;
 	max-width: 1120px;
-	margin: 0 auto;
+	margin: 0 auto 131px;
 	display: flex;
 	flex-wrap: wrap;
-}
 
-.new {
-	flex: 0 0 329px;
-	margin-right: 67px;
+	@media (max-width: 1279px) {
+		max-width: 724px;
+	}
 }
 
 .header {
-	padding-bottom: 7px;
-	border-bottom: 1px solid #CFD8DC;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 	margin-bottom: 40px;
-}
-
-.often {
-	flex: 1;
 }
 
 .title {
@@ -27,6 +23,20 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #455A64;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #CFD8DC;
+
+	&:first-child {
+		flex: 0 0 329px;
+	}
+
+	&:last-child {
+		flex: 0 0 724px;
+
+		@media (max-width: 1279px) {
+			flex: 0 0 329px;
+		}
+	}
 }
 
 .wrapper {
@@ -46,6 +56,12 @@
 
 	&:not(:last-child) {
 		margin-bottom: 67px;
+	}
+
+	@media (max-width: 1279px) {
+		&:last-child {
+			display: none;
+		}
 	}
 }
 

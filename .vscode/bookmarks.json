@@ -42,6 +42,31 @@
 					"line": 450,
 					"column": 19,
 					"label": ""
+				},
+				{
+					"line": 559,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 656,
+					"column": 19,
+					"label": ""
+				},
+				{
+					"line": 747,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 842,
+					"column": 19,
+					"label": ""
+				},
+				{
+					"line": 930,
+					"column": 18,
+					"label": ""
 				}
 			]
 		},
@@ -129,17 +154,17 @@
 					"label": ""
 				},
 				{
-					"line": 102,
+					"line": 112,
 					"column": 9,
 					"label": ""
 				},
 				{
-					"line": 114,
+					"line": 124,
 					"column": 8,
 					"label": ""
 				},
 				{
-					"line": 161,
+					"line": 171,
 					"column": 13,
 					"label": ""
 				}
@@ -156,21 +181,6 @@
 				{
 					"line": 12,
 					"column": 10,
-					"label": ""
-				}
-			]
-		},
-		{
-			"path": "src/components/Card/Card.module.scss",
-			"bookmarks": [
-				{
-					"line": 0,
-					"column": 12,
-					"label": ""
-				},
-				{
-					"line": 70,
-					"column": 8,
 					"label": ""
 				}
 			]
@@ -214,17 +224,12 @@
 					"label": ""
 				},
 				{
-					"line": 8,
-					"column": 6,
-					"label": ""
-				},
-				{
-					"line": 13,
+					"line": 12,
 					"column": 9,
 					"label": ""
 				},
 				{
-					"line": 23,
+					"line": 19,
 					"column": 8,
 					"label": ""
 				}
