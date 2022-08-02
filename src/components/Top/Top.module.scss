@@ -4,6 +4,11 @@
 	margin: 0 0 124px;
 	background-color: #f8faff;
 
+	&.employer {
+		padding-top: 56px;
+		height: 720px;
+	}
+
 	@media (max-width: 1024px) {
 		padding-top: 106px;
 		height: 688px;
@@ -30,6 +35,11 @@
 	&.employer {
 		min-height: 616px;
 		background-image: url(../../../public/images/top_img_employer.svg);
+		background-position: 104.8% 0;
+
+		.content {
+			margin: 132px 0 0;
+		}
 
 		@media (max-width: 1280px) {
 			background-position: 98% 0;
@@ -185,7 +195,6 @@
 	border-right-style: none;
 	font-size: 16px;
 	color: #1d2428;
-	cursor: pointer;
 
 	&::placeholder {
 		color: #78909c;

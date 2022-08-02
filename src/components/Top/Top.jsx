@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 function Top({ active }) {
     return (
-        <section className={styles.container}>
+        <section className={`${styles.container} ${active === 'employer' ? styles.employer : ''}`}>
             <div className={`${styles.wrapper} ${active === 'employer' ? styles.employer : ''} `}>
                 <div className={styles.content}>
                     <h3 className={styles.caption}>съемочная группа. реквизит. объекты. продакшены</h3>
