@@ -8,6 +8,16 @@
 	@media (max-width: 1279px) {
 		max-width: 724px;
 	}
+
+	@media (max-width: 767px) {
+		display: block;
+		max-width: 329px;
+		margin: 0 auto 198px;
+	}
+
+	@media (max-width: 425px) {
+		max-width: 321px;
+	}
 }
 
 .header {
@@ -15,6 +25,10 @@
 	justify-content: space-between;
 	width: 100%;
 	margin-bottom: 40px;
+
+	@media (max-width: 767px) {
+		display: block;
+	}
 }
 
 .title {
@@ -39,10 +53,32 @@
 	}
 }
 
+.title_often {
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.title_often_mob {
+	margin: 0 0 16px;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+
+	@media (max-width: 767px) {
+		margin: 56px 0 40px;
+	}
+}
+
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+	@media (max-width: 767px) {
+		display: block;
+	}
 }
 
 .item {
@@ -62,6 +98,17 @@
 		&:last-child {
 			display: none;
 		}
+	}
+
+	@media (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 48px;
+		}
+	}
+
+	@media (max-width: 425px) {
+		width: 321px;
+		padding: 19px 15px 11px;
 	}
 }
 
@@ -235,6 +282,7 @@
 	transform: translateX(-50%);
 	display: inline-block;
 	font-size: 16px;
+	white-space: nowrap;
 	line-height: 16px;
 	color: #1681e0;
 	border-bottom: 1px solid #1681e0;
@@ -250,5 +298,9 @@
 	&:active {
 		border-bottom: 1px solid #1163ac;
 		color: #1163ac;
+	}
+
+	@media (max-width: 767px) {
+		bottom: -74px;
 	}
 }

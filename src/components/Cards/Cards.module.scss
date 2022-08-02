@@ -10,6 +10,16 @@
 	}
 }
 
+.other_cities {
+	@media (max-width: 1279px) {
+		display: none;
+	}
+
+	@media (max-width: 767px) {
+		display: block;
+	}
+}
+
 .wrapper {
 	display: flex;
 	justify-content: space-between;

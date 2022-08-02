@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 function Content({ active }) {
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${active === 'employer' ? styles.employer : ''}`}>
             <h2 className={styles.title}>Как это работает?</h2>
             {active === 'applicant' && (
                 <div className={styles.wrapper}>

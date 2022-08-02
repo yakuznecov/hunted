@@ -6,7 +6,7 @@ function Resumes({}) {
         <section className={styles.container}>
             <div className={styles.header}>
                 <h2 className={styles.title}>новые резюме</h2>
-                <h2 className={styles.title}>часто просматривают</h2>
+                <h2 className={cn(styles.title, styles.title_often)}>часто просматривают</h2>
             </div>
             <div className={styles.wrapper}>
                 <div className={styles.item}>
@@ -204,6 +204,8 @@ function Resumes({}) {
                         </a>
                     </div>
                 </div>
+
+                <h2 className={cn(styles.title, styles.title_often_mob)}>часто просматривают</h2>
 
                 <div className={styles.item}>
                     <div className={styles.top}>

@@ -40,6 +40,48 @@
 			background-position: 100% 0;
 			padding: 0 0 0 104px;
 		}
+
+		@media (max-width: 965px) {
+			background-position: 112% 0;
+		}
+
+		@media (max-width: 896px) {
+			padding: 0 0 0 40px;
+			background-position: 105.8% 0;
+		}
+
+		@media (max-width: 895px) {
+			background-image: none;
+			padding: 0;
+		}
+
+		@media (max-width: 767px) {
+			min-height: 582px;
+
+			.caption {
+				margin: 0 0 17px 0;
+			}
+
+			.content {
+				width: 100%;
+				margin: 5px 0 0;
+			}
+
+			.title {
+				max-width: 417px;
+				margin: 0 auto 31px;
+			}
+
+			.search {
+				margin: 0 0 29px 0;
+			}
+		}
+
+		@media (max-width: 425px) {
+			.title {
+				max-width: 313px;
+			}
+		}
 	}
 
 	@media (max-width: 1280px) {
@@ -97,7 +139,7 @@
 	color: #1681e0;
 	margin: 0 0 17px 2px;
 
-	@media (max-width: 425px) {
+	@media (max-width: 895px) {
 		margin: 0 0 16px 0;
 	}
 }
@@ -120,6 +162,7 @@
 .search {
 	display: flex;
 	max-width: 550px;
+	width: 100%;
 	margin: 0 0 29px 1px;
 
 	@media (max-width: 425px) {
@@ -199,6 +242,14 @@
 
 	&.employer {
 		min-width: 199px;
+
+		@media (max-width: 767px) {
+			min-width: 183px;
+		}
+
+		@media (max-width: 425px) {
+			min-width: 94px;
+		}
 	}
 
 	@media (hover: hover) {

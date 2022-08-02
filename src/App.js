@@ -10,24 +10,24 @@ import Resumes from './components/Resumes/Resumes';
 import Footer from './components/Footer/Footer';
 
 function App() {
-    const [activePage, setActivePage] = useState('employer');
+	const [activePage, setActivePage] = useState('applicant');
 
-    const switchActivePage = (page, e) => {
-        setActivePage(page);
-    };
+	const switchActivePage = (page, e) => {
+		setActivePage(page);
+	};
 
-    return (
-        <div className="App">
-            <Header onSwitch={switchActivePage} active={activePage} />
-            <Top active={activePage} />
-            {activePage === 'applicant' && <Cards active={activePage} />}
-            {activePage === 'employer' && <Resumes />}
-            {activePage === 'employer' && <Cards active={activePage} />}
-            <Content active={activePage} />
-            <Join />
-            <Footer />
-        </div>
-    );
+	return (
+		<div className="App">
+			<Header onSwitch={switchActivePage} active={activePage} />
+			<Top active={activePage} />
+			{activePage === 'applicant' && <Cards active={activePage} />}
+			{activePage === 'employer' && <Resumes />}
+			{activePage === 'employer' && <Cards active={activePage} />}
+			<Content active={activePage} />
+			<Join />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

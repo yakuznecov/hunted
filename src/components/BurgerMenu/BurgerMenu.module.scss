@@ -78,7 +78,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	min-height: 620px;
+	min-height: 632px;
 	margin: 0;
 	padding: 95px 0 0;
 	background-color: #fff;
@@ -99,4 +99,149 @@
 	@media (max-width: 1024px) {
 		padding: 79px 0 0;
 	}
+}
+
+.wrapper {
+	max-width: 1024px;
+	padding: 0 92px;
+	margin: 0 auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+	// height: calc(100vh - 79px);
+
+	@media (max-width: 896px) {
+		max-width: 100%;
+		padding: 0 28px;
+	}
+}
+
+.line_box {
+	max-width: 1024px;
+	margin: 0 auto 56px;
+	padding: 0 12px;
+}
+
+.line {
+	max-width: 100%;
+	height: 1px;
+	background-color: #e1e1f3;
+}
+
+.inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 12px 0 0;
+}
+
+.scope {
+	max-width: 362px;
+	width: 100%;
+	margin-right: 16px;
+
+	.title {
+		margin-left: 12px;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.title {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #b0bec5;
+	margin-bottom: 20px;
+}
+
+.scope__wrapper {
+	width: 100%;
+}
+
+.scope_item {
+	display: flex;
+	width: 100%;
+	padding: 12px;
+	border-radius: 24px;
+	min-height: 99px;
+	cursor: pointer;
+	margin-bottom: 1px;
+	background-color: transparent;
+
+	@media (hover: hover) {
+		&:hover {
+			border-radius: 24px;
+			background-color: #FAFAFD;
+		}
+	}
+
+	&:active {
+		border-radius: 24px;
+		background-color: #FAFAFD;
+	}
+}
+
+.scope_icon {
+	height: 32px;
+	flex: 0 0 32px;
+	margin-right: 16px;
+}
+
+.scope_info {
+	padding-top: 7px;
+}
+
+.scope_title {
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: 600;
+	color: #455a64;
+	margin-bottom: 8px;
+}
+
+.scope_text {
+	font-size: 16px;
+	line-height: 20px;
+	color: #607d8b;
+	margin-bottom: 0;
+}
+
+.help {
+	max-width: 360px;
+	width: 100%;
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.help__top {
+	border-bottom: 1px solid #e1e1f3;
+	padding-bottom: 45px;
+	margin: 30px 0 32px;
+}
+
+.help_link {
+	display: block;
+	padding: 10px 0;
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: 600;
+	color: #455a64;
+
+	@media (hover: hover) {
+		&:hover {
+			color: #151B1E;
+		}
+	}
+
+	&:active {
+		color: #151B1E;
+	}
+}
+
+.help__rules {
+	margin-top: 30px;
 }
