@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import styles from './Cards.module.scss';
 import cn from 'classnames';
 
