@@ -20,7 +20,7 @@ function Top({ active }) {
                     )}
 
                     <div className={styles.search}>
-                        <div className={styles.input__box}>
+                        <label className={styles.input__box}>
                             {active === 'applicant' && (
                                 <input
                                     className={styles.input}
@@ -52,7 +52,7 @@ function Top({ active }) {
                                     />
                                 </svg>
                             </span>
-                        </div>
+                        </label>
 
                         {active === 'applicant' && (
                             <a className={styles.input_btn} href="/">
