@@ -2,7 +2,7 @@
 	display: flex;
 	margin-left: 24px;
 
-	@media (min-width: 1025px) {
+	@media (min-width: 1280px) {
 		display: none;
 	}
 }
@@ -45,7 +45,7 @@
 	z-index: 9999;
 	margin: 0;
 
-	@media (min-width: 1025px) {
+	@media (min-width: 1280px) {
 		display: none;
 	}
 }
@@ -78,7 +78,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	min-height: 632px;
+	min-height: 100vh;
 	margin: 0;
 	padding: 95px 0 0;
 	background-color: #fff;
@@ -87,39 +87,30 @@
 	opacity: 0;
 	visibility: hidden;
 
-	// &.active {
-	// 	opacity: 1;
-	// 	visibility: visible;
-	// }
-
-	@media (max-width: 1280px) {
-		padding: 95px 80px 0 68px;
+	@media (max-width: 1279px) {
+		padding: 80px 80px 0 68px;
 	}
 
 	@media (max-width: 1024px) {
-		padding: 79px 0 0;
+		padding: 79px 104px 0 92px;
+	}
+
+	@media (max-width: 896px) {
+		padding: 79px 40px 0 28px;
+	}
+
+	@media (max-width: 480px) {
+		padding: 79px 16px 0;
 	}
 }
 
 .wrapper {
-	max-width: 1024px;
-	padding: 0 92px;
-	margin: 0 auto;
-
-	@media (max-width: 896px) {
-		max-width: 100%;
-		padding: 0 28px;
-	}
-
-	@media (max-width: 480px) {
-		padding: 0 16px;
-	}
+	max-width: 100%;
 }
 
 .line_box {
-	max-width: 1024px;
-	margin: 0 auto;
-	padding: 0 12px;
+	max-width: 100%;
+	padding: 0 0 0 8px;
 
 	@media (max-width: 480px) {
 		padding: 0 4px;
@@ -135,7 +126,7 @@
 .inner {
 	display: flex;
 	justify-content: space-between;
-	padding: 56px 12px 0 0;
+	padding: 56px 0 0 0;
 	overflow-y: auto;
 	overflow-x: hidden;
 	max-height: calc(100vh - 79px);
@@ -245,6 +236,22 @@
 .help {
 	max-width: 360px;
 	width: 100%;
+
+	@media (max-width: 1024px) {
+		max-width: 35.16vw;
+	}
+
+	@media (max-width: 945px) {
+		max-width: 28.56vw;
+	}
+
+	@media (max-width: 896px) {
+		max-width: 40.18vw;
+	}
+
+	@media (max-width: 840px) {
+		max-width: 31.98vw;
+	}
 
 	@media (max-width: 767px) {
 		display: none;

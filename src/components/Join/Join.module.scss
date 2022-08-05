@@ -1,3 +1,7 @@
+.container {
+	padding: 0 20px;
+}
+
 .wrapper {
 	position: relative;
 	margin: 0 auto;
@@ -15,10 +19,11 @@
 	}
 
 	@media (max-width: 895px) {
-		max-width: 440px;
+		max-width: 100%;
 		height: 543px;
 		padding: 0;
 		background-image: url(../../../public/images/join-bg-480.svg);
+		background-position: 100% top;
 		background-color: #F8FAFF;
 	}
 
@@ -38,8 +43,8 @@
 
 	@media (max-width: 895px) {
 		position: absolute;
-		font-size: 30px;
-		max-width: 392px;
+		font-size: 28px;
+		max-width: 420px;
 		width: 100%;
 		text-align: center;
 		line-height: 36px;
@@ -53,6 +58,20 @@
 		font-size: 25px;
 		line-height: 30px;
 		max-width: 290px;
+	}
+}
+
+.box__btn {
+	@media (max-width: 895px) {
+		position: absolute;
+		top: 461px;
+		left: 0;
+		right: 0;
+		padding: 0 24px;
+	}
+
+	@media (max-width: 414px) {
+		top: 449px;
 	}
 }
 
@@ -80,17 +99,8 @@
 	}
 
 	@media (max-width: 895px) {
-		position: absolute;
 		padding: 15px 0;
 		font-size: 17px;
-		min-width: 392px;
-		top: 461px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	@media (max-width: 414px) {
-		min-width: 288px;
-		top: 449px;
+		min-width: 100%;
 	}
 }

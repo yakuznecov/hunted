@@ -134,8 +134,13 @@
 					"label": ""
 				},
 				{
-					"line": 56,
+					"line": 60,
 					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 76,
+					"column": 7,
 					"label": ""
 				}
 			]
@@ -194,18 +199,43 @@
 					"label": ""
 				},
 				{
-					"line": 134,
+					"line": 34,
+					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 73,
+					"column": 7,
+					"label": ""
+				},
+				{
+					"line": 106,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 110,
+					"column": 11,
+					"label": ""
+				},
+				{
+					"line": 125,
 					"column": 8,
 					"label": ""
 				},
 				{
-					"line": 157,
+					"line": 148,
 					"column": 8,
 					"label": ""
 				},
 				{
-					"line": 180,
+					"line": 171,
 					"column": 17,
+					"label": ""
+				},
+				{
+					"line": 235,
+					"column": 7,
 					"label": ""
 				}
 			]
@@ -214,17 +244,17 @@
 			"path": "src/components/Join/Join.module.scss",
 			"bookmarks": [
 				{
-					"line": 0,
+					"line": 4,
 					"column": 10,
 					"label": ""
 				},
 				{
-					"line": 31,
+					"line": 36,
 					"column": 8,
 					"label": ""
 				},
 				{
-					"line": 58,
+					"line": 77,
 					"column": 6,
 					"label": ""
 				}
@@ -249,8 +279,13 @@
 					"label": ""
 				},
 				{
-					"line": 83,
+					"line": 84,
 					"column": 7,
+					"label": ""
+				},
+				{
+					"line": 115,
+					"column": 6,
 					"label": ""
 				}
 			]

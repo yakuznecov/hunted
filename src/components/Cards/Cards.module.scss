@@ -45,6 +45,9 @@
 }
 
 .card__container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	position: relative;
 	width: 329px;
 	height: 445px;
@@ -83,6 +86,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding-right: 75px;
+	width: 100%;
 
 	@media (max-width: 1279px) {
 		padding-right: 0;
@@ -103,6 +107,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #455a64;
+	user-select: none;
 	margin: 0 0 4px;
 }
 
@@ -123,12 +128,14 @@
 }
 
 .count {
+	width: 100%;
 	padding: 0 0 12px 0;
 	border-bottom: 1px solid #cfd8dc;
-	margin: 0 0 32px 0;
+	margin: 0 0 23px 0;
+	user-select: none;
 
 	&.city {
-		margin: 0 0 41px 0;
+		margin: 0 0 33px 0;
 	}
 
 	&.department {
@@ -158,17 +165,26 @@
 	line-height: 25px;
 	font-weight: 700;
 	color: #37474f;
-	margin: 0 0 16px;
+	margin: 9px 0 8px;
+	user-select: none;
 }
 
 .item {
+	display: block;
+	padding: 8px 0;
 	font-size: 16px;
 	line-height: 16px;
 	color: #78909c;
-	margin-bottom: 16px;
+	transition: all 0.2s;
 
-	&:last-child {
-		margin-bottom: 0;
+	@media (hover: hover) {
+		&:hover {
+			color: #4D5F68;
+		}
+	}
+
+	&:active {
+		color: #4D5F68;
 	}
 }
 
@@ -178,7 +194,7 @@
 	line-height: 16px;
 	color: #1681e0;
 	border-bottom: 1px solid #1681e0;
-	margin: 40px 0 0 0;
+	margin-top: auto;
 	transition: all 0.2s;
 
 	@media (hover: hover) {
