@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import NavLink from '../NavLink/NavLink';
 import styles from './Header.module.scss';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import cn from 'classnames';
 
-function Header({ onSwitch, active }) {
+function Header({}) {
+    const location = useLocation();
     const [navbar, setNavbar] = useState(false);
 
     const stickyNavbar = () => {
@@ -19,45 +22,50 @@ function Header({ onSwitch, active }) {
     });
 
     return (
-        <header className={`${styles.header} ${navbar ? styles.active : ''}`}>
-            <div className={`${styles.menu} ${navbar ? styles.active : ''}`}>
-                <a href="/" className={styles.logo} aria-label="Hunted" alt="Hunted">
+        <header className={cn(styles.header, { [styles.active]: navbar })}>
+            <div className={cn(styles.menu, { [styles.active]: navbar })}>
+                <Link to="/" className={styles.logo} alt="Hunted">
                     <img src="images/logo/logo.svg" alt="logo" />
-                </a>
+                </Link>
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
-                        <li
-                            className={`${styles.item} ${active === 'employer' ? styles.employer : ''}`}
-                            onClick={(e) => onSwitch('applicant', e)}
-                            onMouseUp={() => window.scrollTo({ top: 0 })}
-                        >
-                            <span className={styles.title}>Соискателям</span>
-                        </li>
-                        <li
-                            className={`${styles.item} ${active === 'employer' ? styles.employer : ''}`}
-                            onClick={(e) => onSwitch('employer', e)}
-                            onMouseUp={() => window.scrollTo({ top: 0 })}
-                        >
-                            <span className={styles.title}>Работодателям</span>
-                        </li>
-                        <li className={`${styles.item} ${active === 'employer' ? styles.employer : ''}`}>
+                        <Link to="/">
+                            <li
+                                className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
+                                onMouseUp={() => window.scrollTo({ top: 0 })}
+                            >
+                                <span className={styles.title}>Соискателям</span>
+                            </li>
+                        </Link>
+                        <Link to="/employer">
+                            <li
+                                className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
+                                onMouseUp={() => window.scrollTo({ top: 0 })}
+                            >
+                                <span className={styles.title}>Работодателям</span>
+                            </li>
+                        </Link>
+                        <li className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}>
                             <span className={styles.title}>Тарифные планы</span>
                         </li>
                     </ul>
+
                     <ul className={styles.list}>
                         <li className={styles.item}>
-                            <a href="/" className={styles.title}>
+                            <NavLink to="/" className={styles.title}>
                                 Войти
-                            </a>
-                            {active === 'applicant' && (
-                                <a href="/" className={styles.create}>
+                            </NavLink>
+
+                            {location.pathname === '/' && (
+                                <NavLink to={'/'} className={styles.create}>
                                     Создать резюме
-                                </a>
+                                </NavLink>
                             )}
-                            {active === 'employer' && (
-                                <a href="/" className={cn(styles.create, styles.employer)}>
+
+                            {location.pathname === '/employer' && (
+                                <NavLink to={'/'} className={cn(styles.create, styles.employer)}>
                                     Разместить вакансию
-                                </a>
+                                </NavLink>
                             )}
                         </li>
                     </ul>

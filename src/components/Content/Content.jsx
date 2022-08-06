@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Content.module.scss';
 import cn from 'classnames';
 
-function Content({ active }) {
+function Content() {
     return (
         <div className={`${styles.container} ${active === 'employer' ? styles.employer : ''}`}>
             <h2 className={styles.title}>Как это работает?</h2>
