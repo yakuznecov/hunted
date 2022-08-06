@@ -1,6 +1,7 @@
-import NavLink from '../components/NavLink/NavLink';
-import styles from '../components/Cards/Cards.module.scss';
+import NavLink from 'components/NavLink/NavLink';
+import styles from 'components/Cards/Cards.module.scss';
 import cn from 'classnames';
+import ApplicantSteps from 'components/ApplicantSteps/ApplicantSteps';
 
 function Home() {
     return (
@@ -354,6 +355,8 @@ function Home() {
                     </div>
                 </div>
             </section>
+
+            <ApplicantSteps />
         </>
     );
 }

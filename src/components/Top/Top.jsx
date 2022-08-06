@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 
-import NavLink from '../NavLink/NavLink';
+import NavLink from 'components/NavLink/NavLink';
 import styles from './Top.module.scss';
 import cn from 'classnames';
 

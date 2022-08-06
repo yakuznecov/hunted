@@ -1,8 +1,9 @@
 import cn from 'classnames';
 
-import NavLink from '../components/NavLink/NavLink';
-import styles from '../components/Cards/Cards.module.scss';
-import Resumes from '../components/Resumes/Resumes';
+import NavLink from 'components/NavLink/NavLink';
+import styles from 'components/Cards/Cards.module.scss';
+import Resumes from 'components/Resumes/Resumes';
+import EmployerSteps from 'components/EmployerSteps/EmployerSteps';
 
 function Employer() {
     return (
@@ -251,6 +252,7 @@ function Employer() {
                 </div>
             </div>
             <Resumes />
+            <EmployerSteps />
         </>
     );
 }

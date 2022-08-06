@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import NavLink from '../NavLink/NavLink';
+import NavLink from 'components/NavLink/NavLink';
 import styles from './Header.module.scss';
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import BurgerMenu from 'components/BurgerMenu/BurgerMenu';
 import cn from 'classnames';
 
 function Header({}) {
@@ -29,14 +29,15 @@ function Header({}) {
                 </Link>
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
-                        <Link to="/">
-                            <li
-                                className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
-                                onMouseUp={() => window.scrollTo({ top: 0 })}
-                            >
+                        <li
+                            className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
+                            onMouseUp={() => window.scrollTo({ top: 0 })}
+                        >
+                            <Link to="/">
                                 <span className={styles.title}>Соискателям</span>
-                            </li>
-                        </Link>
+                            </Link>
+                        </li>
+
                         <Link to="/employer">
                             <li
                                 className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
