@@ -1,19 +1,24 @@
+import { Link, useLocation } from 'react-router-dom';
+
+import NavLink from '../NavLink/NavLink';
 import styles from './Top.module.scss';
 import cn from 'classnames';
 
-function Top({ active }) {
+function Top() {
+    const location = useLocation();
+
     return (
-        <section className={`${styles.container} ${active === 'employer' ? styles.employer : ''}`}>
-            <div className={`${styles.wrapper} ${active === 'employer' ? styles.employer : ''} `}>
+        <section className={cn(styles.container, { [styles.employer]: location.pathname === '/employer' })}>
+            <div className={cn(styles.wrapper, { [styles.employer]: location.pathname === '/employer' })}>
                 <div className={styles.content}>
                     <h3 className={styles.caption}>съемочная группа. реквизит. объекты. продакшены</h3>
 
-                    {active === 'applicant' && (
+                    {location.pathname === '/' && (
                         <h1 className={styles.title}>
                             Кинолифт | Hunted <br /> Это больше, чем просто поиск работы в кино
                         </h1>
                     )}
-                    {active === 'employer' && (
+                    {location.pathname === '/employer' && (
                         <h1 className={styles.title}>
                             Разместите вакансию и найдите сотрудника уже сегодня <br /> на Кинолифт | Hunted
                         </h1>
@@ -21,14 +26,14 @@ function Top({ active }) {
 
                     <div className={styles.search}>
                         <label className={styles.input__box}>
-                            {active === 'applicant' && (
+                            {location.pathname === '/' && (
                                 <input
                                     className={styles.input}
                                     placeholder={window.innerWidth >= 480 ? 'Профессия или компания' : 'Профессия'}
                                     type="text"
                                 />
                             )}
-                            {active === 'employer' && (
+                            {location.pathname === '/employer' && (
                                 <input
                                     className={styles.input}
                                     placeholder={window.innerWidth >= 480 ? 'Резюме или навыки' : 'Резюме'}
@@ -54,27 +59,29 @@ function Top({ active }) {
                             </span>
                         </label>
 
-                        {active === 'applicant' && (
-                            <a className={styles.input_btn} href="/">
+                        {location.pathname === '/' && (
+                            <NavLink className={styles.input_btn} to={'/'}>
                                 {window.innerWidth >= 480 ? 'Найти работу' : 'Найти'}
-                            </a>
+                            </NavLink>
                         )}
-                        {active === 'employer' && (
-                            <a className={cn(styles.input_btn, styles.employer)} href="/">
+
+                        {location.pathname === '/employer' && (
+                            <NavLink className={cn(styles.input_btn, styles.employer)} to={'/'}>
                                 {window.innerWidth >= 480 ? 'Найти сотрудника' : 'Найти'}
-                            </a>
+                            </NavLink>
                         )}
                     </div>
 
-                    {active === 'applicant' && (
-                        <a href="/" className={styles.link}>
+                    {location.pathname === '/' && (
+                        <Link className={styles.link} to={'/employer'}>
                             Я ищу сотрудника
-                        </a>
+                        </Link>
                     )}
-                    {active === 'employer' && (
-                        <a href="/" className={styles.link}>
+
+                    {location.pathname === '/employer' && (
+                        <Link className={styles.link} to={'/'}>
                             Я ищу работу
-                        </a>
+                        </Link>
                     )}
                 </div>
             </div>
