@@ -33,8 +33,8 @@ function Header({}) {
                             className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
                             onMouseUp={() => window.scrollTo({ top: 0 })}
                         >
-                            <Link to="/">
-                                <span className={styles.title}>Соискателям</span>
+                            <Link to="/" className={styles.title}>
+                                Соискателям
                             </Link>
                         </li>
 

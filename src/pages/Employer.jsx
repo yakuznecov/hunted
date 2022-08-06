@@ -1,11 +1,13 @@
 import cn from 'classnames';
-
+import { useMedia } from 'react-use';
 import NavLink from 'components/NavLink/NavLink';
 import styles from 'components/Cards/Cards.module.scss';
 import Resumes from 'components/Resumes/Resumes';
 import EmployerSteps from 'components/EmployerSteps/EmployerSteps';
 
 function Employer() {
+    const isLaptop = useMedia('(max-width: 1280px)');
+
     return (
         <>
             <div className={styles.container}>
@@ -166,14 +168,10 @@ function Employer() {
                         </div>
                     </div>
                     <div className={cn(styles.card__container, styles.professions)}>
-                        <h2 className={styles.title}>
-                            {window.innerWidth >= 1280 ? 'Резюме по профессиям' : 'по профессиям'}
-                        </h2>
+                        <h2 className={styles.title}>{isLaptop ? 'по профессиям' : 'Резюме по профессиям'}</h2>
                         <div className={cn(styles.count, styles.department)}>
                             <span className={styles.count_num}>155</span>
-                            <span className={styles.count_text}>
-                                {window.innerWidth >= 1280 ? 'Профессий' : 'Позиций'}
-                            </span>
+                            <span className={styles.count_text}>{isLaptop ? 'Позиций' : 'Профессий'}</span>
                         </div>
                         <div className={styles.card__wrapper}>
                             <div className={styles.inner}>

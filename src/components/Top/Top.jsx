@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useMedia } from 'react-use';
 
 import NavLink from 'components/NavLink/NavLink';
 import styles from './Top.module.scss';
@@ -6,6 +7,7 @@ import cn from 'classnames';
 
 function Top() {
     const location = useLocation();
+    const isMobile = useMedia('(max-width: 480px)');
 
     return (
         <section className={cn(styles.container, { [styles.employer]: location.pathname === '/employer' })}>
@@ -29,14 +31,14 @@ function Top() {
                             {location.pathname === '/' && (
                                 <input
                                     className={styles.input}
-                                    placeholder={window.innerWidth >= 480 ? 'Профессия или компания' : 'Профессия'}
+                                    placeholder={isMobile ? 'Профессия' : 'Профессия или компания'}
                                     type="text"
                                 />
                             )}
                             {location.pathname === '/employer' && (
                                 <input
                                     className={styles.input}
-                                    placeholder={window.innerWidth >= 480 ? 'Резюме или навыки' : 'Резюме'}
+                                    placeholder={isMobile ? 'Резюме' : 'Резюме или навыки'}
                                     type="text"
                                 />
                             )}
@@ -61,13 +63,13 @@ function Top() {
 
                         {location.pathname === '/' && (
                             <NavLink className={styles.input_btn} to={'/'}>
-                                {window.innerWidth >= 480 ? 'Найти работу' : 'Найти'}
+                                {isMobile ? 'Найти' : 'Найти работу'}
                             </NavLink>
                         )}
 
                         {location.pathname === '/employer' && (
                             <NavLink className={cn(styles.input_btn, styles.employer)} to={'/'}>
-                                {window.innerWidth >= 480 ? 'Найти сотрудника' : 'Найти'}
+                                {isMobile ? 'Найти' : 'Найти сотрудника'}
                             </NavLink>
                         )}
                     </div>

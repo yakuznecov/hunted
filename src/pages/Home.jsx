@@ -1,9 +1,12 @@
+import { useMedia } from 'react-use';
 import NavLink from 'components/NavLink/NavLink';
 import styles from 'components/Cards/Cards.module.scss';
 import cn from 'classnames';
 import ApplicantSteps from 'components/ApplicantSteps/ApplicantSteps';
 
 function Home() {
+    const isLaptop = useMedia('(max-width: 1280px)');
+
     return (
         <>
             <section className={styles.container}>
@@ -272,9 +275,7 @@ function Home() {
                         </div>
                     </div>
                     <div className={cn(styles.card__container, styles.professions)}>
-                        <h2 className={styles.title}>
-                            {window.innerWidth > 1280 ? 'работа по профессиям' : 'по профессиям'}
-                        </h2>
+                        <h2 className={styles.title}>{isLaptop ? 'по профессиям' : 'работа по профессиям'}</h2>
                         <div className={cn(styles.count, styles.department)}>
                             <span className={styles.count_num}>155</span>
                             <span className={styles.count_text}>Профессий</span>
