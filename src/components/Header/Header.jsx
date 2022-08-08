@@ -9,17 +9,20 @@ function Header({}) {
     const location = useLocation();
     const [navbar, setNavbar] = useState(false);
 
-    const stickyNavbar = () => {
-        if (window.scrollY >= 10) {
-            setNavbar(true);
-        } else {
-            setNavbar(false);
-        }
-    };
-
     useEffect(() => {
+        const stickyNavbar = () => {
+            if (window.scrollY >= 10) {
+                setNavbar(true);
+            } else {
+                setNavbar(false);
+            }
+        };
+
         window.addEventListener('scroll', stickyNavbar);
-    });
+        return () => {
+            window.removeEventListener('scroll', stickyNavbar);
+        };
+    }, []);
 
     return (
         <header className={cn(styles.header, { [styles.active]: navbar })}>
