@@ -29,24 +29,19 @@ function Header({}) {
                 </Link>
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
-                        <li
-                            className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
-                            onMouseUp={() => window.scrollTo({ top: 0 })}
-                        >
+                        <li className={styles.item} onMouseUp={() => window.scrollTo({ top: 0 })}>
                             <Link to="/" className={styles.title}>
                                 Соискателям
                             </Link>
                         </li>
 
-                        <Link to="/employer">
-                            <li
-                                className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}
-                                onMouseUp={() => window.scrollTo({ top: 0 })}
-                            >
-                                <span className={styles.title}>Работодателям</span>
-                            </li>
-                        </Link>
-                        <li className={cn(styles.item, { [styles.employer]: location.pathname === '/employer' })}>
+                        <li className={styles.item} onMouseUp={() => window.scrollTo({ top: 0 })}>
+                            <Link to="/employer" className={styles.title}>
+                                Работодателям
+                            </Link>
+                        </li>
+
+                        <li className={styles.item}>
                             <span className={styles.title}>Тарифные планы</span>
                         </li>
                     </ul>
