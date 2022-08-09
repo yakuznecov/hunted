@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hunted/static/css/main.caeee4ef.css",
-    "main.js": "/hunted/static/js/main.89413415.js",
+    "main.js": "/hunted/static/js/main.7a8d72cc.js",
     "static/media/applicant-2-1024.png": "/hunted/static/media/applicant-2-1024.ccc49a9178486488d810.png",
     "static/media/applicant-1-1024.png": "/hunted/static/media/applicant-1-1024.34d92f8439549bda0387.png",
     "static/media/applicant-2.png": "/hunted/static/media/applicant-2.d1289d2c77a4145b7348.png",
@@ -67,10 +67,10 @@
     "static/media/employer-line-2-1024.svg": "/hunted/static/media/employer-line-2-1024.a1e9688b47596b2c2ea8.svg",
     "static/media/employer-line-2.svg": "/hunted/static/media/employer-line-2.d79d5c0ef30f9bda611e.svg",
     "main.caeee4ef.css.map": "/hunted/static/css/main.caeee4ef.css.map",
-    "main.89413415.js.map": "/hunted/static/js/main.89413415.js.map"
+    "main.7a8d72cc.js.map": "/hunted/static/js/main.7a8d72cc.js.map"
   },
   "entrypoints": [
     "static/css/main.caeee4ef.css",
-    "static/js/main.89413415.js"
+    "static/js/main.7a8d72cc.js"
   ]
 }
