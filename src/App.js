@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
 import './scss/app.scss';
 import Header from 'components/Header/Header';
 import Top from 'components/Top/Top';
