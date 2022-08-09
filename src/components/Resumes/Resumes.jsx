@@ -1,5 +1,6 @@
 import styles from './Resumes.module.scss';
 import cn from 'classnames';
+import NavLink from 'components/NavLink/NavLink';
 
 function Resumes({}) {
     return (
@@ -52,9 +53,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>75 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -101,9 +102,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>140 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -150,9 +151,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>280 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -199,9 +200,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>50 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -250,9 +251,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>45 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -299,9 +300,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>80 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -348,9 +349,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>300 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -397,9 +398,9 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>150 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
@@ -446,16 +447,16 @@ function Resumes({}) {
                     </div>
                     <div className={styles.footer}>
                         <span>105 000 руб.</span>
-                        <a href="#" className={styles.footer_link}>
+                        <NavLink to={'/'} className={styles.footer_link}>
                             Посмотреть
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
             </div>
 
-            <a href="/" className={styles.link}>
+            <NavLink to={'/'} className={styles.link}>
                 Посмотреть больше резюме
-            </a>
+            </NavLink>
         </section>
     );
 }

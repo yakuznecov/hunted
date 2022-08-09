@@ -38,9 +38,9 @@ function Home() {
                                 2-ой режиссер
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Ещё 18 профессий
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#a6e1bf' }}>
                             <img src="images/rocketLaunch.svg" alt="icon" />
@@ -74,9 +74,9 @@ function Home() {
                                 Работник сцены
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Ещё 8 профессий
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#ffb097' }}>
                             <img src="images/fire.svg" alt="icon" />
@@ -110,9 +110,9 @@ function Home() {
                                 Единая Медиа Группа
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Все компании
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#a8e8ec' }}>
                             <img src="images/leaf.svg" alt="icon" />
@@ -146,9 +146,9 @@ function Home() {
                                 2-ой режиссер
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Ещё 1506 профессий
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#bbccc8' }}>
                             <img src="images/buildings.svg" alt="icon" />
@@ -182,9 +182,9 @@ function Home() {
                                 Асс по реквизиту
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Ещё 1506 профессий
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#b0d2c1' }}>
                             <img src="images/maskHappy.svg" alt="icon" />
@@ -220,9 +220,9 @@ function Home() {
                                 Архангельск
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Все города
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#c2d4ff' }}>
                             <img src="images/globe.svg" alt="icon" />
@@ -266,9 +266,9 @@ function Home() {
                                 Сценарный
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Смотреть все
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#C4BEC4' }}>
                             <img src="images/suitcaseSimple.svg" alt="icon" />
@@ -346,9 +346,9 @@ function Home() {
                                 </NavLink>
                             </div>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Смотреть все
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#D1C4B9' }}>
                             <img src="images/users.svg" alt="icon" />

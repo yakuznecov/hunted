@@ -3,6 +3,7 @@ import styles from './BurgerMenu.module.scss';
 import { SlideDown } from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css';
 import cn from 'classnames';
+import NavLink from 'components/NavLink/NavLink';
 
 function BurgerMenu() {
     const [burgerTab, setBurgerTab] = useState(null);
@@ -29,7 +30,7 @@ function BurgerMenu() {
                         <div className={styles.scope}>
                             <h3 className={styles.title}>Возможности</h3>
                             <div className={styles.scope__wrapper}>
-                                <a href="#" className={styles.scope_item}>
+                                <NavLink to={'/'} className={styles.scope_item}>
                                     <div className={styles.scope_icon}>
                                         <img src="images/scope-1.svg" alt="applicant" />
                                     </div>
@@ -39,9 +40,9 @@ function BurgerMenu() {
                                             Если вы находитесь в поиске работы, то вам сюда
                                         </p>
                                     </div>
-                                </a>
+                                </NavLink>
 
-                                <a href="#" className={styles.scope_item}>
+                                <NavLink to={'/'} className={styles.scope_item}>
                                     <div className={styles.scope_icon}>
                                         <img src="images/scope-2.svg" alt="employer" />
                                     </div>
@@ -51,9 +52,9 @@ function BurgerMenu() {
                                             Для тех, кто разыскивает специалистов в свою команду
                                         </p>
                                     </div>
-                                </a>
+                                </NavLink>
 
-                                <a href="#" className={styles.scope_item}>
+                                <NavLink to={'/'} className={styles.scope_item}>
                                     <div className={styles.scope_icon}>
                                         <img src="images/scope-3.svg" alt="plans" />
                                     </div>
@@ -63,37 +64,37 @@ function BurgerMenu() {
                                             Различные варианты, приобретайте только нужные вам услуги
                                         </p>
                                     </div>
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
 
                         <div className={styles.help}>
                             <h3 className={styles.title}>справка</h3>
                             <div className={styles.help__top}>
-                                <a href="#" className={styles.help_link}>
+                                <NavLink to={'/'} className={styles.help_link}>
                                     FAQ
-                                </a>
-                                <a href="#" className={styles.help_link}>
+                                </NavLink>
+                                <NavLink to={'/'} className={styles.help_link}>
                                     Блог
-                                </a>
-                                <a href="#" className={styles.help_link}>
+                                </NavLink>
+                                <NavLink to={'/'} className={styles.help_link}>
                                     Связаться с нами
-                                </a>
+                                </NavLink>
                             </div>
                             <h3 className={styles.title}>правила сервиса</h3>
                             <div className={styles.help__rules}>
-                                <a href="#" className={styles.help_link}>
+                                <NavLink to={'/'} className={styles.help_link}>
                                     Правила сервиса
-                                </a>
-                                <a href="#" className={styles.help_link}>
+                                </NavLink>
+                                <NavLink to={'/'} className={styles.help_link}>
                                     Конфиденциальность
-                                </a>
-                                <a href="#" className={styles.help_link}>
+                                </NavLink>
+                                <NavLink to={'/'} className={styles.help_link}>
                                     Файлы cookies
-                                </a>
-                                <a href="#" className={styles.help_link}>
+                                </NavLink>
+                                <NavLink to={'/'} className={styles.help_link}>
                                     Обратная связь
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
 
@@ -114,7 +115,7 @@ function BurgerMenu() {
                                 </button>
                                 <SlideDown className={styles.accordion__item_content} closed={burgerTab !== 0}>
                                     <div className={styles.scope__wrapper}>
-                                        <a href="#" className={styles.scope_item}>
+                                        <NavLink to={'/'} className={styles.scope_item}>
                                             <div className={styles.scope_icon}>
                                                 <img src="images/scope-1.svg" alt="applicant" />
                                             </div>
@@ -124,9 +125,9 @@ function BurgerMenu() {
                                                     Если вы находитесь в поиске работы, то вам сюда
                                                 </p>
                                             </div>
-                                        </a>
+                                        </NavLink>
 
-                                        <a href="#" className={styles.scope_item}>
+                                        <NavLink to={'/'} className={styles.scope_item}>
                                             <div className={styles.scope_icon}>
                                                 <img src="images/scope-2.svg" alt="employer" />
                                             </div>
@@ -136,9 +137,9 @@ function BurgerMenu() {
                                                     Для тех, кто разыскивает специалистов в свою команду
                                                 </p>
                                             </div>
-                                        </a>
+                                        </NavLink>
 
-                                        <a href="#" className={styles.scope_item}>
+                                        <NavLink to={'/'} className={styles.scope_item}>
                                             <div className={styles.scope_icon}>
                                                 <img src="images/scope-3.svg" alt="plans" />
                                             </div>
@@ -148,7 +149,7 @@ function BurgerMenu() {
                                                     Различные варианты, приобретайте только нужные вам услуги
                                                 </p>
                                             </div>
-                                        </a>
+                                        </NavLink>
                                     </div>
                                 </SlideDown>
                             </div>
@@ -170,60 +171,60 @@ function BurgerMenu() {
                                 <SlideDown className={styles.accordion__item_content} closed={burgerTab !== 1}>
                                     <h3 className={styles.title}>Справка</h3>
                                     <div className={styles.help__top}>
-                                        <a href="#" className={styles.help_link}>
+                                        <NavLink to={'/'} className={styles.help_link}>
                                             <img className={styles.help_link_icon} src="images/faq-24.svg" alt="FAQ" />
                                             <span>FAQ</span>
-                                        </a>
-                                        <a href="#" className={styles.help_link}>
+                                        </NavLink>
+                                        <NavLink to={'/'} className={styles.help_link}>
                                             <img
                                                 className={styles.help_link_icon}
                                                 src="images/userSquare.svg"
                                                 alt="Blog"
                                             />
                                             <span>Блог</span>
-                                        </a>
-                                        <a href="#" className={styles.help_link}>
+                                        </NavLink>
+                                        <NavLink to={'/'} className={styles.help_link}>
                                             <img
                                                 className={styles.help_link_icon}
                                                 src="images/contactUs.svg"
                                                 alt="contact us"
                                             />
                                             <span>Связаться с нами</span>
-                                        </a>
+                                        </NavLink>
                                     </div>
                                     <h3 className={styles.title}>правила сервиса</h3>
                                     <div className={styles.help__rules}>
-                                        <a href="#" className={styles.help_link}>
+                                        <NavLink to={'/'} className={styles.help_link}>
                                             <img className={styles.help_link_icon} src="images/rules.svg" alt="FAQ" />
                                             <span>Правила сервиса</span>
-                                        </a>
-                                        <a href="#" className={styles.help_link}>
+                                        </NavLink>
+                                        <NavLink to={'/'} className={styles.help_link}>
                                             <img className={styles.help_link_icon} src="images/shield.svg" alt="FAQ" />
                                             <span>Конфиденциальность</span>
-                                        </a>
-                                        <a href="#" className={styles.help_link}>
+                                        </NavLink>
+                                        <NavLink to={'/'} className={styles.help_link}>
                                             <img className={styles.help_link_icon} src="images/cookies.svg" alt="FAQ" />
                                             <span>Файлы cookies</span>
-                                        </a>
-                                        <a href="#" className={styles.help_link}>
+                                        </NavLink>
+                                        <NavLink to={'/'} className={styles.help_link}>
                                             <img className={styles.help_link_icon} src="images/chat.svg" alt="FAQ" />
                                             <span>Обратная связь</span>
-                                        </a>
+                                        </NavLink>
                                     </div>
                                 </SlideDown>
                             </div>
                         </div>
 
                         <div className={styles.links}>
-                            <a href="#" className={styles.link}>
+                            <NavLink to={'/'} className={styles.link}>
                                 создать резюме
-                            </a>
-                            <a href="#" className={styles.link}>
+                            </NavLink>
+                            <NavLink to={'/'} className={styles.link}>
                                 разместить вакансию
-                            </a>
-                            <a href="#" className={styles.link}>
+                            </NavLink>
+                            <NavLink to={'/'} className={styles.link}>
                                 вход
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

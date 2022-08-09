@@ -39,9 +39,9 @@ function Employer() {
                                 2-ой режиссер
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Ещё 1506 резюме
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#bbccc8' }}>
                             <img src="images/buildings.svg" alt="icon" />
@@ -75,9 +75,9 @@ function Employer() {
                                 Асс по реквизиту
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Ещё 962 резюме
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#b0d2c1' }}>
                             <img src="images/maskHappy.svg" alt="icon" />
@@ -113,9 +113,9 @@ function Employer() {
                                 Архангельск
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Все города
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#c2d4ff' }}>
                             <img src="images/globe.svg" alt="icon" />
@@ -159,9 +159,9 @@ function Employer() {
                                 Сценарный
                             </NavLink>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Смотреть все
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#C4BEC4' }}>
                             <img src="images/suitcaseSimple.svg" alt="icon" />
@@ -239,9 +239,9 @@ function Employer() {
                                 </NavLink>
                             </div>
                         </div>
-                        <a href="/" className={styles.link}>
+                        <NavLink to={'/'} className={styles.link}>
                             Смотреть все
-                        </a>
+                        </NavLink>
 
                         <div className={styles.icon} style={{ backgroundColor: '#D1C4B9' }}>
                             <img src="images/users.svg" alt="icon" />
