@@ -8,17 +8,19 @@
 	@media (max-width: 895px) {
 		margin: 0 0 76px;
 	}
+
+	.other_cities {
+		@media (max-width: 1279px) {
+			display: none;
+		}
+
+		@media (max-width: 767px) {
+			display: block;
+		}
+	}
 }
 
-.other_cities {
-	@media (max-width: 1279px) {
-		display: none;
-	}
 
-	@media (max-width: 767px) {
-		display: block;
-	}
-}
 
 .wrapper {
 	display: flex;

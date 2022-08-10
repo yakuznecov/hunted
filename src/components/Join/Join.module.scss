@@ -1,5 +1,13 @@
 .container {
-	padding: 0 20px;
+	padding: 0 80px;
+
+	@media (max-width: 896px) {
+		padding: 0 40px;
+	}
+
+	@media (max-width: 480px) {
+		padding: 0 20px;
+	}
 }
 
 .wrapper {
@@ -10,12 +18,16 @@
 	background-color: #F8FAFF;
 	background-image: url(../../../public/images/join-bg.svg);
 	background-repeat: no-repeat;
+	background-position: 100% top;
 	padding: 97px 75px;
 
-	@media (max-width: 1024px) {
-		max-width: 856px;
+	@media (max-width: 1200px) {
 		padding: 97px 41px;
 		background-image: url(../../../public/images/join-bg-1024.svg);
+	}
+
+	@media (max-width: 1024px) {
+		max-width: 816px;
 	}
 
 	@media (max-width: 895px) {
@@ -23,12 +35,10 @@
 		height: 543px;
 		padding: 0;
 		background-image: url(../../../public/images/join-bg-480.svg);
-		background-position: 100% top;
 		background-color: #F8FAFF;
 	}
 
 	@media (max-width: 414px) {
-		max-width: 336px;
 		height: 529px;
 		background-image: url(../../../public/images/join-bg-360.svg);
 	}

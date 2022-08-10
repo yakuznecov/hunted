@@ -63,12 +63,9 @@
 		}
 
 		@media (max-width: 895px) {
+			min-height: 470px;
 			background-image: none;
 			padding: 0;
-		}
-
-		@media (max-width: 767px) {
-			min-height: 470px;
 
 			.caption {
 				margin: 0 0 17px 0;
@@ -88,6 +85,7 @@
 				margin: 0 0 29px 0;
 			}
 		}
+
 
 		@media (max-width: 425px) {
 			.title {

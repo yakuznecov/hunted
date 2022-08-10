@@ -94,28 +94,13 @@
 					"label": ""
 				},
 				{
-					"line": 163,
+					"line": 161,
 					"column": 8,
 					"label": ""
 				},
 				{
-					"line": 234,
+					"line": 232,
 					"column": 13,
-					"label": ""
-				}
-			]
-		},
-		{
-			"path": "src/components/Cards/Cards.module.scss",
-			"bookmarks": [
-				{
-					"line": 0,
-					"column": 12,
-					"label": ""
-				},
-				{
-					"line": 22,
-					"column": 10,
 					"label": ""
 				}
 			]
@@ -174,17 +159,22 @@
 			"path": "src/components/Join/Join.module.scss",
 			"bookmarks": [
 				{
-					"line": 4,
+					"line": 0,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 12,
 					"column": 10,
 					"label": ""
 				},
 				{
-					"line": 36,
+					"line": 46,
 					"column": 8,
 					"label": ""
 				},
 				{
-					"line": 77,
+					"line": 87,
 					"column": 6,
 					"label": ""
 				}
